@@ -14,7 +14,7 @@ namespace Entra21.ExerciciosWhile
             int idade = 0;
             double peso = 0.00;
             string sexo = "";
-            double altura = "";
+            double altura = 0;
             int quantidadeGolsMarcados = 0;
             int quantidadeCartoesAmarelos = 0;
             int quantidadeCartoesVermelhos = 0;
