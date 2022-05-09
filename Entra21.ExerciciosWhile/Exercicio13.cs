@@ -131,9 +131,22 @@ namespace Entra21.ExerciciosWhile
                     nomeMenosCartoesVermelhos = nome;
                 }
                 else { }
-
-
             }
+            Console.Write("O jogador com o menor peso é:" + "\n" + nomeMenorPeso + "\nE o peso é igual a: " + menorPeso + "kg");
+            Console.Write("O jogador com o maior peso é:" + "\n" + nomeMaiorPeso + "\nE o peso é igual a: " + maiorPeso + "kg");
+            Console.Write("O jogador com a maior altura é:" + "\n" + nomeMaiorAltura + "\nE a altura é igual a: " + maiorAltura + "m");
+            Console.Write("O jogador com o menor nome é:" + nomeMenorNome);
+            Console.Write("O jogador com o maior nome é:" + nomeMaiorNome);
+            Console.Write("A quantidade de jogadores do sexo feminino é:" + quantidadeJogadoresFeminino);
+            Console.Write("A quantidade de jogadores do sexo masculino é:" + quantidadeJogadoresMasculino);
+            Console.Write("O jogador com o menor número de cartões amarelos é:" + "\n" + nomeMenosCartoesAmarelos + 
+                "\nE a quantidade é igual a: " + quantidadeMenosCartoesAmarelos);
+            Console.Write("O jogador com o maior número de cartões amarelos é:" + "\n" + nomeMaisCartoesAmarelos +
+                "\nE a quantidade é igual a: " + quantidadeMaisCartoesAmarelos);
+            Console.Write("O jogador com o menor número de cartões vermelhos é:" + "\n" + nomeMenosCartoesVermelhos +
+                "\nE a quantidade é igual a: " + quantidadeMenosCartoesVermelhos);
+            Console.Write("O jogador com o maior número de cartões vermelhos é:" + "\n" + nomeMaisCartoesVermelhos +
+                "\nE a quantidade é igual a: " + quantidadeMaisCartoesVermelhos);
         }
     }
 }
