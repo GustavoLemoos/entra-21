@@ -6,7 +6,7 @@ Console.WriteLine(@"---------Menu--------------
 3 - Exercício 03
 3 - Exercício 04");
 
-Console.Write("Digite a opção desejada dasdsa: ");
+Console.Write("Digite a opção desejada: ");
 int opcaoDesejada = Convert.ToInt32(Console.ReadLine());
 
 if (opcaoDesejada == 1)
