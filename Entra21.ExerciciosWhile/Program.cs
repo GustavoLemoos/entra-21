@@ -1,10 +1,11 @@
 ﻿using Entra21.ExerciciosWhile;
 
 Console.WriteLine(@"---------Menu--------------
-1 - Exercício 01
-2 - Exercício 02
-3 - Exercício 03
-3 - Exercício 04");
+1 - Exercício 08
+2 - Exercício 09
+3 - Exercício 10
+4 - Exercício 13
+5 - Exercício 14");
 
 Console.Write("Digite a opção desejada: ");
 int opcaoDesejada = Convert.ToInt32(Console.ReadLine());
@@ -29,4 +30,9 @@ else if (opcaoDesejada == 4)
 {
     Exercicio13 exercicio13 = new Exercicio13();
     exercicio13.Executar();
+}
+else if (opcaoDesejada == 5)
+{
+    Exercício14 exercicio14 = new Exercício14();
+    exercicio14.Executar();
 }
