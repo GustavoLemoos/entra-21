@@ -12,20 +12,35 @@ namespace Entra21.ExerciciosWhile
         {
             Console.Write("Temporizador: ");
             int segundos = 59, minutos = 59, horas = 23;
-            int indiceSegundos = 0, indiceMinutos = 0, indiceHoras = 0;
-            int indice = 0;
-            while (indice < 86399)
+            int indiceSegundos = 59;
+            int indice = 1;
+            while (indice <= 86400)
             {
-                Console.Write(horas + ":" + minutos + ":" + segundos);
-                segundos = segundos - 1;
-                if ((segundos < 0))
+                Console.WriteLine(horas + ":" + minutos + ":" + segundos);
+                if ((indice % 60) == 0)
                 {
+                    minutos = minutos - 1;
+                }
+                else { }
+                if (minutos < 0)
+                {
+                    minutos = 59;
+                }
+                else { }
+                if ((indice % 3600) == 0)
+                {
+                    horas = horas - 1;
+                }
+                else { }
+                indiceSegundos = indiceSegundos - 1;
+                segundos = segundos - 1;
+                if (indiceSegundos < 0)
+                {
+                    indiceSegundos = 59;
                     segundos = 59;
                 }
                 else
                 { }
-                indiceMinutos = indiceMinutos + 1;
-                if ((indiceMinutos%3600)  1 )
                 indice = indice + 1;
             }
         }
