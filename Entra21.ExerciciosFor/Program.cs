@@ -14,7 +14,7 @@ if (opcaoDesejada == 1)
     Exercicio01 exercicio01 = new Exercicio01();
     exercicio01.Executar();
 }
-if (opcaoDesejada == 1)
+if (opcaoDesejada == 2)
 {
     // MenuDaClasse nomeVariavel = new NomeDaClasse();
     Exercicio02 exercicio02 = new Exercicio02();
