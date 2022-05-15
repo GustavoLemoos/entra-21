@@ -35,3 +35,15 @@ if (opcaoDesejada == 4)
     Exercicio04 exercicio04 = new Exercicio04();
     exercicio04.Executar();
 }
+if (opcaoDesejada == 5)
+{
+    // MenuDaClasse nomeVariavel = new NomeDaClasse();
+    Exercicio05 exercicio05 = new Exercicio05();
+    exercicio05.Executar();
+}
+if (opcaoDesejada == 6)
+{
+    // MenuDaClasse nomeVariavel = new NomeDaClasse();
+    Exercicio06 exercicio06 = new Exercicio06();
+    exercicio06.Executar();
+}
