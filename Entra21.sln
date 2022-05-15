@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExemplosWhile", "En
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExerciciosWhile", "Entra21.ExerciciosWhile\Entra21.ExerciciosWhile.csproj", "{032B4487-760F-4792-A741-36D56BD8E17E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.ExerciciosFor2", "Entra21.ExerciciosFor2\Entra21.ExerciciosFor2.csproj", "{A70F33D8-30D1-4A37-8B79-2DC41A9DF30F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.ExerciciosFor", "Entra21.ExerciciosFor2\Entra21.ExerciciosFor.csproj", "{A70F33D8-30D1-4A37-8B79-2DC41A9DF30F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
