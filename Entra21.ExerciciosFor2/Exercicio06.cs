@@ -39,7 +39,7 @@ namespace Entra21.ExerciciosFor
             var quantidadeCartoesVermelhosMenor = Int32.MaxValue;
             var quantidadeCartoesVermelhosMaior = Int32.MinValue;
 
-            for (var i = 0; i < 22; i++)
+            for (var i = 0; i < 23; i++)
             {
                 Console.WriteLine("Digite o nome do jogador: ");
                 nome = Console.ReadLine();
