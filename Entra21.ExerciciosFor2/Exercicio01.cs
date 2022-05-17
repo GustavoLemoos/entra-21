@@ -21,10 +21,10 @@ namespace Entra21.ExerciciosFor
                 {
                     Console.BackgroundColor = ConsoleColor.Yellow;
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.Write("Digite um nome válido para a peça: ");
-                    nomePeca = Console.ReadLine();
+                    Console.WriteLine("Digite um nome válido para a peça: ");
                     Console.BackgroundColor = ConsoleColor.Black;
-                    Console.BackgroundColor = ConsoleColor.White;
+                    Console.ForegroundColor = ConsoleColor.White;
+                    nomePeca = Console.ReadLine();
                 }
                 while ((precoPeca <= 0.00))
                 {
