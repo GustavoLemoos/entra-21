@@ -15,7 +15,7 @@ namespace Entra21.ExerciciosFor
                 var nomePeca = "";
                 var nomeValido = false;
                 var precoPeca = 0.00;
-                Console.WriteLine("Digite abc o nome da peça: ");
+                Console.WriteLine("Digite o nome da peça: ");
                 nomePeca = Console.ReadLine();
                 while (nomePeca.Trim().Length == 0)
                 {
