@@ -21,7 +21,7 @@ namespace Entra21.ExerciciosFor
                 {
                     Console.BackgroundColor = ConsoleColor.Yellow;
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Digite um nome válido para a peça: ");
+                    Console.WriteLine("Digite abc um nome válido para a peça: ");
                     Console.BackgroundColor = ConsoleColor.Black;
                     Console.ForegroundColor = ConsoleColor.White;
                     nomePeca = Console.ReadLine();
