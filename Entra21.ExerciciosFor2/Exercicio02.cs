@@ -11,6 +11,8 @@ namespace Entra21.ExerciciosFor
         public void Executar()
         {
             var quantidadeCarrosCadastrar = 0;
+            Console.Write("Digite a quantidade de carros à cadastrar: ");
+            quantidadeCarrosCadastrar = Convert.ToInt32(Console.ReadLine());
             var anoCarro = 0;
             var modelo = "";
             var valorCarro = 0.00;
@@ -18,8 +20,6 @@ namespace Entra21.ExerciciosFor
             var nomeComecaA = 0;
             var somaValorCarro = 0.00;
             var somaAnoCarro = 0.00;
-            Console.Write("Digite a quantidade de carros à cadastrar: ");
-            quantidadeCarrosCadastrar = Convert.ToInt32(Console.ReadLine());
             for (var i = 0; i < quantidadeCarrosCadastrar; i++)
             {
                 Console.WriteLine("Digite o modelo do carro: ");

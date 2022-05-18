@@ -34,9 +34,9 @@ namespace Entra21.ExerciciosFor
                         Console.ForegroundColor = ConsoleColor.White;
                         Console.Write("Digite o preço da peça: R$");
                         precoPeca = Convert.ToDouble(Console.ReadLine());
-                        precoPeca = precoPeca / precoPeca;
+                        
                     }
-                    catch
+                    catch 
                     {
                         Console.BackgroundColor = ConsoleColor.Yellow;
                         Console.ForegroundColor = ConsoleColor.Red;
