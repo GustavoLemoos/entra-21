@@ -16,3 +16,8 @@ if (opcaoDesejada == 1)
     Exercicio01Sala exercicio01 = new Exercicio01Sala();
     exercicio01.Executar();
 }
+if (opcaoDesejada == 2)
+{
+    Exercicio02Sala exercicio02 = new Exercicio02Sala();
+    exercicio02.Executar();
+}
