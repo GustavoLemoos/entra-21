@@ -31,8 +31,8 @@ if (opcaoDesejada == 3)
 }
 if (opcaoDesejada == 4)
 {
-    Exercicio04 exercicio04 = new Exercicio04();
-    exercicio04.Executar();
+    Exercicio02 exercicio02 = new Exercicio02();
+    exercicio02.Executar();
 }
 if (opcaoDesejada == 5)
 {

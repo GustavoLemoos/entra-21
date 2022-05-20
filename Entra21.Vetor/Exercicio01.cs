@@ -14,9 +14,10 @@ namespace Entra21.Vetor
     {
         public void Executar()
         {
-            int[] numeros = new int[16];
+            int quantidade = 16;
+            int[] numeros = new int[quantidade];
             int soma = 0;
-            for (int i = 0; i < 16; i++)
+            for (int i = 0; i < quantidade; i++)
             {
                 Console.Write("Digite um número: ");
                 int numero = Convert.ToInt32(Console.ReadLine());
