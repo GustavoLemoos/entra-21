@@ -12,7 +12,6 @@ namespace Entra21.Vetor
     {
         public void Executar()
         {
-            double media = 0.00;
             double[] notas = new double[4];
             Console.Write("Digite a nota 1: ");
             notas[0] = Convert.ToDouble(Console.ReadLine());
@@ -22,6 +21,7 @@ namespace Entra21.Vetor
             notas[2] = Convert.ToDouble(Console.ReadLine());
             Console.Write("Digite a nota 4: ");
             notas[3] = Convert.ToDouble(Console.ReadLine());
+            double media = 0.00;
             media = (notas[0] + notas[1] + notas[2] + notas[3])/4;
             Console.Write("A média das notas informadas é " + media);
         }
