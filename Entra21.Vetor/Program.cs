@@ -36,16 +36,16 @@ if (opcaoDesejada == 4)
 }
 if (opcaoDesejada == 5)
 {
-    Exercicio05 exercicio05 = new Exercicio05();
-    exercicio05.Executar();
+    Exercicio03 exercicio03 = new Exercicio03();
+    exercicio03.Executar();
 }
 if (opcaoDesejada == 6)
 {
-    Exercicio06 exercicio06 = new Exercicio06();
-    exercicio06.Executar();
+    Exercicio04 exercicio04 = new Exercicio04();
+    exercicio04.Executar();
 }
 if (opcaoDesejada == 7)
 {
-    Exercicio07 exercicio07 = new Exercicio07();
-    exercicio07.Executar();
+    Exercicio05 exercicio05 = new Exercicio05();
+    exercicio05.Executar();
 }
