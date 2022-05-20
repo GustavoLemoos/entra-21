@@ -31,7 +31,7 @@ namespace Entra21.Vetor
             {
                 soma = soma + notas[i];
             }
-            Console.Write($"O nome do aluno é {nome} e a sua média é: " + {soma / quantidade});
+            Console.Write($"O nome do aluno é {nome} e a sua média é: " + (soma / quantidade));
         }
     }
 }
