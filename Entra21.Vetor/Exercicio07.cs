@@ -27,7 +27,7 @@ namespace Entra21.Vetor
             }
             string nomeMenorAltura = ";";
             double menorAltura = double.MaxValue;
-            for (int i = 0; i < quantidade; i++)
+            for (int i = 0; i < nomes.Length; i++)
             {
                 if (alturas[i] <= menorAltura)
                 {

@@ -16,7 +16,7 @@ namespace Entra21.Vetor
             int quantidade = 9;
             int[] idades = new int[quantidade];
             string[] nomes = new string[quantidade];
-            for (int i = 0; i < quantidade; i++)
+            for (int i = 0; i < idades.Length; i++)
             {
                 Console.Write("Digite o seu nome: ");
                 string nome = Console.ReadLine();
@@ -27,7 +27,7 @@ namespace Entra21.Vetor
             }
             string nomeMaiorIdade = "";
             int maiorIdade = int.MinValue;
-            for (int i = 0; i < quantidade; i++)
+            for (int i = 0; i < idades.Length; i++)
             {
                 if (idades[i] >= maiorIdade)
                 {

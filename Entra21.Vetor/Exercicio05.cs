@@ -15,14 +15,14 @@ namespace Entra21.Vetor
         {
             int quantidade = 5;
             double[] pesos = new double[quantidade];
-            for (int i = 0; i < quantidade; i++)
+            for (int i = 0; i < pesos.Length; i++)
             {
                 Console.Write($"Digite o peso{i+1}: ");
                 double peso = Convert.ToDouble(Console.ReadLine());
                 pesos[i] = peso;
             }
             double soma = 0.00;
-            for (int i = 0; i < quantidade; i++)
+            for (int i = 0; i < pesos.Length; i++)
             {
                 soma = soma + pesos[i];
             }

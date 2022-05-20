@@ -15,14 +15,14 @@ namespace Entra21.Vetor
         {
             int quantidade = 10;
             string[] nomes = new string[quantidade];
-            for (int i = 0; i < quantidade; i++)
+            for (int i = 0; i < nomes.Length; i++)
             {
                 Console.Write("Digite um nome: ");
                 string nome = Console.ReadLine();
                 nomes[i] = nome;
             }
             Console.WriteLine("Os nomes informados são:");
-            for (int i = 0; i < quantidade; i++)
+            for (int i = 0; i < nomes.Length.Length; i++)
             {
                 Console.Write(nomes[i] + "\n");
             }

@@ -20,14 +20,14 @@ namespace Entra21.Vetor
             string nome = "";
             Console.Write("Digite o seu nome: ");
             nome = Console.ReadLine();
-            for (int i = 0; i < quantidade; i++)
+            for (int i = 0; i < notas.Length; i++)
             {
                 Console.Write($"Digite a nota{1}: ");
                 double nota = Convert.ToDouble(Console.ReadLine());
                 notas[i] = nota;
             }
             double soma = 0.00;
-            for (int i = 0; i < quantidade; i++)
+            for (int i = 0; i < notas.Length; i++)
             {
                 soma = soma + notas[i];
             }

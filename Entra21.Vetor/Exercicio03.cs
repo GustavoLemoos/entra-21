@@ -17,7 +17,7 @@ namespace Entra21.Vetor
             int quantidade = 7;
             string[] nomes = new string[quantidade];
             double[] precos = new double[quantidade];
-            for (int i = 0; i < quantidade; i++)
+            for (int i = 0; i < nomes.Length; i++)
             {
                 Console.Write("Digite o nome do produto: ");
                 string nome = Console.ReadLine();
@@ -26,7 +26,7 @@ namespace Entra21.Vetor
                 double preco = Convert.ToDouble(Console.ReadLine());
                 precos[i] = preco;
             }
-            for (int i = 0; i < quantidade; i++)
+            for (int i = 0; i < nomes.Length; i++)
             {
                 Console.WriteLine($"O produto{i} informado é {nomes[i]}, e o seu preço é R${precos[i]}");
             }

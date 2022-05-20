@@ -17,7 +17,7 @@ namespace Entra21.Vetor
             int quantidade = 16;
             int[] numeros = new int[quantidade];
             int soma = 0;
-            for (int i = 0; i < quantidade; i++)
+            for (int i = 0; i < numeros.Length; i++)
             {
                 Console.Write("Digite um número: ");
                 int numero = Convert.ToInt32(Console.ReadLine());
