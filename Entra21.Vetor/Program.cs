@@ -49,3 +49,13 @@ if (opcaoDesejada == 7)
     Exercicio05 exercicio05 = new Exercicio05();
     exercicio05.Executar();
 }
+if (opcaoDesejada == 8)
+{
+    Exercicio06 exercicio06 = new Exercicio06();
+    exercicio06.Executar();
+}
+if (opcaoDesejada == 9)
+{
+    Exercicio07 exercicio07 = new Exercicio07();
+    exercicio07.Executar();
+}
