@@ -28,7 +28,7 @@ namespace Entra21.Vetor
             }
             for (int i = 0; i < quantidade; i++)
             {
-                Console.WriteLine($"O produto{i} informado é {nomes[i]}, e o seu valor é R${precos[i]}");
+                Console.WriteLine($"O produto{i} informado é {nomes[i]}, e o seu preço é R${precos[i]}");
             }
         }
     }
