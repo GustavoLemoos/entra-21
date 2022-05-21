@@ -20,7 +20,6 @@ namespace Entra21.Vetor
         {
             var quantidade = 5;
             string[] nomes = new string[quantidade];
-            string[] nomesDesordenados = new string[quantidade];
             for (var i = 0; i < nomes.Length; i++)
             {
                 Console.Write($"Digite o nome do usuário{i+1}: ");
@@ -28,6 +27,7 @@ namespace Entra21.Vetor
                 nomes[i] = nome;
             }
 
+            string[] nomesDesordenados = new string[quantidade];
             for (var i = 0; i < nomesDesordenados.Length; i++)
             {
                 nomesDesordenados[i] = nomes[quantidade - (i + 1)];
