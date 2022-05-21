@@ -18,7 +18,32 @@ namespace Entra21.Vetor
     {
         public void Executar()
         {
+            var quantidade = 5;
+            string[] nomes = new string[quantidade];
+            string[] nomesDesordenados = new string[quantidade];
+            for (var i = 0; i < nomes.Length; i++)
+            {
+                Console.Write($"Digite o nome do usuário{i+1}: ");
+                string nome = Console.ReadLine();
+                nomes[i] = nome;
+            }
 
+            for (var i = 0; i < nomesDesordenados.Length; i++)
+            {
+                nomesDesordenados[i] = nomes[quantidade - (i + 1)];
+            }
+
+            Console.Write("O vetor nomes armazena: ");
+            for (var i = 0; i < nomes.Length; i++)
+            {
+                Console.Write($"{nomes[i]}, ");
+            }
+
+            Console.Write("\nO vetor nomesDesordenados armazena: ");
+            for (var i = 0; i < nomesDesordenados.Length; i++)
+            {
+                Console.Write($"{nomesDesordenados[i]}, ");
+            }
         }
     }
 }
