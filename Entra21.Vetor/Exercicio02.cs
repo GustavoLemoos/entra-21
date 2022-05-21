@@ -22,7 +22,7 @@ namespace Entra21.Vetor
                 nomes[i] = nome;
             }
             Console.WriteLine("Os nomes informados são:");
-            for (int i = 0; i < nomes.Length.Length; i++)
+            for (int i = 0; i < nomes.Length; i++)
             {
                 Console.Write(nomes[i] + "\n");
             }

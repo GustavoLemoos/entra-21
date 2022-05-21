@@ -1,6 +1,5 @@
 ﻿using Entra21.Vetor;
 
-var opcaoDesejada = 0;
 Console.WriteLine(@"---------Menu--------------
 1 - Exercício 01 Sala
 2 - Exercício 02 Sala
@@ -10,9 +9,10 @@ Console.WriteLine(@"---------Menu--------------
 6 - Exercicio 04
 7 - Exercicio 05
 8 - Exercicio 06
-9 - Exercicio 07");
+9 - Exercicio 07
+10 - ExemploProfessor");
 Console.Write("Digite a opção desejada: ");
-opcaoDesejada = Convert.ToInt32(Console.ReadLine());
+var opcaoDesejada = Convert.ToInt32(Console.ReadLine());
 
 if (opcaoDesejada == 1)
 {
@@ -58,4 +58,9 @@ if (opcaoDesejada == 9)
 {
     Exercicio07 exercicio07 = new Exercicio07();
     exercicio07.Executar();
+}
+if (opcaoDesejada == 10)
+{
+    ExemploProfessor exercicioprofessor = new ExemploProfessor();
+    exercicioprofessor.Executar();
 }
