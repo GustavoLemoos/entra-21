@@ -22,7 +22,7 @@ namespace Entra21.Vetor
                 {
                     try
                     {
-                        Console.Write("Digite um número par:");
+                        Console.Write("Digite um número par: ");
                         int numero = Convert.ToInt32(Console.ReadLine());
                         numeros[i] = numero;
                         if ((numero % 2) == 0)
@@ -32,9 +32,20 @@ namespace Entra21.Vetor
                     }
                     catch
                     {
-                        Console.Write("Digite um número que deve ser inteiro e par: ");
+                        Console.BackgroundColor = ConsoleColor.Yellow;
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Digite um número que deve ser inteiro e par.");
                     }
+                    Console.BackgroundColor = ConsoleColor.Black;
+                    Console.ForegroundColor = ConsoleColor.White;
                 }
+                numeroValido = false;
+            }
+
+            Console.Write("Os números digitados foram: ");
+            for (int i = 0; i < numeros.Length; i++)
+            {
+                Console.Write(numeros[i] + ",");
             }
         }
     }
