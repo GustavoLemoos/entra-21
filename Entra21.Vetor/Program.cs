@@ -10,7 +10,15 @@ Console.WriteLine(@"---------Menu--------------
 7 - Exercicio 05
 8 - Exercicio 06
 9 - Exercicio 07
-10 - ExemploProfessor");
+10 - ExemploProfessor
+11 - Exercicio 08
+12 - Exercicio 09
+13 - Exercicio 10
+14 - Exercicio 11
+15 - Exercicio 12
+16 - Exercicio 13
+17 - Exercicio 14
+18 - Exercicio 15");
 Console.Write("Digite a opção desejada: ");
 var opcaoDesejada = Convert.ToInt32(Console.ReadLine());
 
@@ -63,4 +71,44 @@ if (opcaoDesejada == 10)
 {
     ExemploProfessor exercicioprofessor = new ExemploProfessor();
     exercicioprofessor.Executar();
+}
+if (opcaoDesejada == 11)
+{
+    Exercicio08 exercicio08 = new Exercicio08();
+    exercicio08.Executar();
+}
+if (opcaoDesejada == 12)
+{
+    Exercicio09 exercicio09 = new Exercicio09();
+    exercicio09.Executar();
+}
+if (opcaoDesejada == 13)
+{
+    Exercicio10 exercicio10 = new Exercicio10();
+    exercicio10.Executar();
+}
+if (opcaoDesejada == 14)
+{
+    Exercicio11 exercicio11 = new Exercicio11();
+    exercicio11.Executar();
+}
+if (opcaoDesejada == 15)
+{
+    Exercicio12 exercicio12 = new Exercicio12();
+    exercicio12.Executar();
+}
+if (opcaoDesejada == 16)
+{
+    Exercicio13 exercicio13 = new Exercicio13();
+    exercicio13.Executar();
+}
+if (opcaoDesejada == 17)
+{
+    Exercicio14 exercicio14 = new Exercicio14();
+    exercicio14.Executar();
+}
+if (opcaoDesejada == 18)
+{
+    Exercicio15 exercicio15 = new Exercicio15();
+    exercicio15.Executar();
 }
