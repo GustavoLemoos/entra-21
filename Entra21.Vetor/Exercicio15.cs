@@ -40,7 +40,7 @@ namespace Entra21.Vetor
                     }
                 }
             }
-            Console.Write("Os nomes em ordem decrescente de quantidade de caracteres, são: ");
+            Console.Write("Os nomes em ordem decrescentes de quantidade de caracteres, são: ");
             for (var i = 0; i < nomes.Length; i++)
             {
                 Console.Write($"\n{nomes[i]},");
