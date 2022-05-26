@@ -73,5 +73,19 @@ namespace Entra21.ExemplosOrientacaoObjeto.Tests.Produtos
             // Assert
             emPromocao.Should().BeTrue();
         }
+
+        [Fact]
+        public void Validar_EstaEmPromocao_False()
+        {
+            // Arrange
+            var produto = new Produto();
+            produto.DataVencimento = DateTime.Today;
+
+            // Act
+            var emPromocao = produto.EstaEmPromocao();
+
+            // Assert
+            emPromocao.Should().BeFalse();
+        }
     }
 }
