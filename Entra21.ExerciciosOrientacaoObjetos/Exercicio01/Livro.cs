@@ -33,21 +33,20 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio01
         public int QuantidadePaginas;
         public int QuantidadePaginasLidas;
         public int QuantidadeReleituras;
-
         public void ApresentarTituloAutor()
         {
-            Console.Write($"Título: {Titulo} + \nAutor: + {Autor}");
+            Console.WriteLine($"Título: {Titulo} \nAutor: {Autor}");
         }
 
         public void ApresentarQuantidadePaginasParaLer()
         {
-            Console.Write($"A quantidade de páginas para ler é: + {QuantidadePaginas - QuantidadePaginasLidas}");
+            Console.WriteLine($"A quantidade de páginas para ler é: {QuantidadePaginas - QuantidadePaginasLidas}");
             QuantidadeReleituras = QuantidadeReleituras + QuantidadePaginasLidas;
         }
 
         public void ApresentarQuantidadeTotalPaginasLidas()
         {
-            Console.Write($"A quantidade total de páginas lidas é: {QuantidadeReleituras}");
+            Console.WriteLine($"A quantidade total de páginas lidas é: {QuantidadeReleituras}");
         }
     }
 }
