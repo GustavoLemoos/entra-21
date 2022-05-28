@@ -8,7 +8,7 @@ Console.WriteLine(@"Menu
 1 - Exercício01
 2 - Exercício02
 3 - Exercício03
-4 - Exercício04
+4 - Exercício04a
 5 - Exercício05");
 Console.Write("Digite a opção desejada: ");
 var opcao = Convert.ToInt32(Console.ReadLine());
