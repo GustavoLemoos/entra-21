@@ -17,20 +17,9 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio02
             temperatura.Temperaturaa = Convert.ToDouble(Console.ReadLine());
             Console.Write("Digite a unidade da temperatura de destino: ");
             temperatura.TemperaturaDestino = Console.ReadLine().ToLower();
-            if (temperatura.TemperaturaDestino == "c")
-            {
-                temperatura.CalcularCelsius();
-            }
-            else if (temperatura.TemperaturaDestino == "k")
-            {
-                temperatura.CalcularKelvin();
-            }
-            else
-            {
-                temperatura.CalcularFahrenheit();
-            }
-
+            temperatura.ConverterTemperatura();
             Console.WriteLine("O valor da temperatura de destino é: " + temperatura.Temperaturaa);
+
         }
     }
 }

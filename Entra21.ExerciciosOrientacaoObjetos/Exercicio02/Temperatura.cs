@@ -22,31 +22,34 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio02
         public string TemperaturaDestino;
         public double Temperaturaa;
 
-        public double CalcularCelsius()
+        public double ConverterTemperatura()
         {
+            if (TemperaturaDestino == "c")
+            {
             Temperaturaa = TemperaturaOrigem == "k"
                 ? (Temperaturaa - 273)
                 : (Temperaturaa - 32) / 1.8;
 
             return Temperaturaa;
-        }
-
-        public double CalcularKelvin()
-        {
+            }
+            else if (TemperaturaDestino == "k")
+            {
             Temperaturaa = TemperaturaOrigem == "c"
                 ? (Temperaturaa + 273)
                 : (Temperaturaa - 32) / 1.8 + 273;
 
             return Temperaturaa;
-        }
-
-        public double CalcularFahrenheit()
-        {
+            }
+            else
+            {
             Temperaturaa = TemperaturaOrigem == "k"
                 ? (Temperaturaa - 273) * 1.8 + 32
                 : Temperaturaa * 1.8 + 32;
 
             return Temperaturaa;
+            }
         }
+
+
     }
 }

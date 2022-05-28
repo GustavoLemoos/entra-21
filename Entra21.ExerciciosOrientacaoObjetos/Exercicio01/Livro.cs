@@ -18,8 +18,7 @@ using System.Threading.Tasks;
 //● ApresentarTituloAutor
 //● ApresentarQuantidadePaginasParaLer
 //● ApresentarQuantidadePaginasLidasNoTotal
-
-//Criar testes unitários validando os métodos criados acima
+//● ApresentarQuantidadeAnosAposPublicação
 
 namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio01
 {
@@ -47,6 +46,11 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio01
         public void ApresentarQuantidadeTotalPaginasLidas()
         {
             Console.WriteLine($"A quantidade total de páginas lidas é: {QuantidadeReleituras}");
+        }
+
+        public void ApresentarQuantidadeAnosPublicacao()
+        {
+            Console.WriteLine($"A quantidade de anos da publicação é: {DateTime.Now.Year - DataLancamento.Year }");
         }
     }
 }

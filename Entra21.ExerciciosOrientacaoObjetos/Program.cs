@@ -18,8 +18,8 @@ else if (opcao == 2)
     ExemploTemperatura exemploTemperatura = new ExemploTemperatura();
     exemploTemperatura.Executar();
 }
-else if (opcao == 4)
-{
-    ExemploFarmacia exemploFarmacia = new ExemploFarmacia();
-    exemploFarmacia.Executar();
-}
+//else if (opcao == 4)
+//{
+//    ExemploFarmacia exemploFarmacia = new ExemploFarmacia();
+//    exemploFarmacia.Executar();
+//}

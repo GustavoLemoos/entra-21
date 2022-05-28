@@ -11,21 +11,26 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio01
         public void Executar()
         {
             Livro livro = new Livro();
-            livro.Titulo = "A força";
-            livro.Autor = "Hoff";
-            livro.ApresentarTituloAutor();
+            Console.Write("Digite o título do livro: ");
+            livro.Titulo = Console.ReadLine();
+            Console.Write("Digite o nome autor do livro: ");
+            livro.Autor = Console.ReadLine();
+            Console.Write("Digite a quantidade de páginas do livro: ");
+            livro.QuantidadePaginas = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Digite a quantidade de páginas lidas do livro: ");
+            livro.QuantidadePaginasLidas = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Digite a quantidade de páginas relidas do livro: ");
+            livro.QuantidadeReleituras = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Digite a data de lançamento do livro: ");
+            livro.DataLancamento = Convert.ToDateTime(Console.ReadLine());
 
-            livro.QuantidadePaginas = 100;
-            livro.QuantidadePaginasLidas = 50;
-            livro.QuantidadeReleituras = 00;
+            livro.ApresentarTituloAutor();
             livro.ApresentarQuantidadePaginasParaLer();
             livro.ApresentarQuantidadeTotalPaginasLidas();
+            livro.ApresentarQuantidadeAnosPublicacao();
 
             //livro.CodigoIsbn = "000-1-2222-3333-4";
             //livro.IdiomaOriginal = "Alemão";
-            //livro.DataLancamento = (03/02/2022);
-
-
 
         }
     }
