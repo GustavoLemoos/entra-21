@@ -74,11 +74,17 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio05
             Console.WriteLine($"A média de filosofia é: {exemploBoletim.CalcularMediaFilosofia()}");
             Console.WriteLine($"A média de sociologia é: {exemploBoletim.CalcularMediaSociologia()}");
             Console.WriteLine($"A média de biologia é: {exemploBoletim.CalcularMediaBiologia()}");
-            
+            Console.WriteLine($"A média geral é: {exemploBoletim.CalcularMediaGeral()}");
 
-            //Console.Write("Digite a quantidade de dias letivos: ");
-            //exemploBoletim.QuantidadeDiasLetivos = Convert.ToInt32(Console.ReadLine());
-            //Console.Write("Digite a quantidade de presenças: ");
+            Console.Write("Digite a quantidade de dias letivos: ");
+            exemploBoletim.QuantidadeDiasLetivos = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Digite a quantidade de presenças: ");
+            exemploBoletim.QuantidadePresenca = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine($"A quantidade de faltas é: {exemploBoletim.CalcularQuantidadeFaltas()}");
+            Console.WriteLine($"O percentual de presença é: {exemploBoletim.CalcularPercentualPresenca()}%");
+            Console.WriteLine($"O percentual de faltas é: {exemploBoletim.CalcularPercentualFaltas()}%");
+
+
 
         }
     }

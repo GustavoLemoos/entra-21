@@ -44,8 +44,8 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio05
         public double[] NotasFilosofia = new double[3];
         public double[] NotasSociologia = new double[3];
         public double[] NotasBiologia = new double[3];
-        public int QuantidadeDiasLetivos;
-        public int QuantidadePresenca;
+        public double QuantidadeDiasLetivos;
+        public double QuantidadePresenca;
 
         public double CalcularMediaMatematica()
         {
@@ -195,29 +195,33 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio05
                 mediaGeral = mediaGeral + NotasMatematica[i] + NotasPortugues[i] + NotasFisica[i] +
                     NotasQuimica[i] + NotasGeografia[i] + NotasHistoria[i] +
                     NotasFilosofia[i] + NotasSociologia[i] + NotasBiologia[i];
-                if (i ==2)
+                if (i == 2)
                 {
-                    mediaGeral = mediaGeral / 9;
+                    mediaGeral = mediaGeral / 27;
                 }
             }
 
             return mediaGeral;
         }
 
-        //public int CalcularQuantidadeFaltas()
-        //{
+        public double CalcularQuantidadeFaltas()
+        {
+            double quantidadeFaltas = QuantidadeDiasLetivos - QuantidadePresenca;
+            return quantidadeFaltas;
 
-        //}
+        }
 
-        //public double CalcularPercentualPresenca()
-        //{
+        public double CalcularPercentualPresenca()
+        {
+            double percentualPresenca = (QuantidadePresenca / QuantidadeDiasLetivos) * 100;
+            return percentualPresenca;
+        }
 
-        //}
-
-        //public double CalcularPercentualFaltas()
-        //{
-
-        //}
+        public double CalcularPercentualFaltas()
+        {
+            double percentualFaltas = 100 - (QuantidadePresenca / QuantidadeDiasLetivos) * 100;
+            return percentualFaltas;
+        }
 
         //public string ApresentarBoletim()
         //{
