@@ -39,28 +39,22 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio04
     {
         public string RazaoSocial;
         public string CNPJ;
-        public string NomeProduto;
-        public double PrecoProduto;
-        public double TotalPedido;
-        public string CategoriaProduto;
-        public int QuantidadeProdutos;
-
-        public void CriarVetores()
-        {
-            string[] NomeProduto = new string[QuantidadeProdutos];
-            double[] PrecoProduto = new double[QuantidadeProdutos];
-            string[] CategoriaProduto = new string[QuantidadeProdutos];
-        }
-
+        public string NomeProduto1;
+        public double PrecoProduto1;
+        public string CategoriaProduto1;
+        public string NomeProduto2;
+        public double PrecoProduto2;
+        public string CategoriaProduto2;
+        public string NomeProduto3;
+        public double PrecoProduto3;
+        public string CategoriaProduto3;
+      
         public double ApresentarTotalPedido()
         {
-            for (var i = 0.0; i < QuantidadeProdutos; i++)
-            {
-                TotalPedido = TotalPedido + PrecoProduto[i];
-            }
-            Console.WriteLine($"O valor total do pedido é: R${TotalPedido}");
+            var totalPedido = PrecoProduto1 + PrecoProduto2 + PrecoProduto3;
 
-            return TotalPedido;
+
+            return totalPedido;
         }
 
         //public double ApresentarTotalPedidoPorCategoriaProduto()
