@@ -16,11 +16,9 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio03
 {
     public class ConversorAscii
     {
-        public string Caracter;
-
+            public string[] Caracter = new string[256];
         public void ConverterCodigoAscii()
         {
-
-        }
     }
+}
 }
