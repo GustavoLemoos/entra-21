@@ -30,7 +30,6 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio02
                 ? (Temperaturaa - 273)
                 : (Temperaturaa - 32) / 1.8;
 
-            return Temperaturaa;
             }
             else if (TemperaturaDestino == "k")
             {
@@ -38,16 +37,15 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio02
                 ? (Temperaturaa + 273)
                 : (Temperaturaa - 32) / 1.8 + 273;
 
-            return Temperaturaa;
             }
-            else
+            else if (TemperaturaDestino == "f")
             {
             Temperaturaa = TemperaturaOrigem == "k"
                 ? (Temperaturaa - 273) * 1.8 + 32
                 : Temperaturaa * 1.8 + 32;
 
-            return Temperaturaa;
             }
+            return Temperaturaa;
         }
 
 
