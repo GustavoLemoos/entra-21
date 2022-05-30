@@ -150,11 +150,11 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio04
             var produtoMaisBarato = "";
             if (PrecoProduto1 <= PrecoProduto2 && PrecoProduto1 <= PrecoProduto3)
             {
-                produtoMaisBarato = NomeProduto1 + "e sua categoria é " + CategoriaProduto1;
+                produtoMaisBarato = NomeProduto1 + " e sua categoria é " + CategoriaProduto1;
             }
             else if (PrecoProduto2 >= PrecoProduto1 && PrecoProduto2 >= PrecoProduto3)
             {
-                produtoMaisBarato = NomeProduto2 + "e sua categoria é " + CategoriaProduto2;
+                produtoMaisBarato = NomeProduto2 + " e sua categoria é " + CategoriaProduto2;
             }
             else
             {
