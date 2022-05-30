@@ -33,8 +33,8 @@ else if (opcao == 4)
     ExemploFarmacia exemploFarmacia = new ExemploFarmacia();
     exemploFarmacia.Executar();
 }
-//else if (opcao == 5)
-//{
-//    ExemploBoletim exemploBoletim = new ExemploBoletim();
-//    exemploBoletim.Executar();
-//}
+else if (opcao == 5)
+{
+    ExemploBoletim exemploBoletim = new ExemploBoletim();
+    exemploBoletim.Executar();
+}
