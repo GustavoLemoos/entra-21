@@ -30,7 +30,11 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio04
             Console.WriteLine("Digite a categoria do produto: ");
             exemploFarmacia.CategoriaProduto3 = Console.ReadLine();
 
-            Console.Write($"O total do pedido é: R${exemploFarmacia.ApresentarTotalPedido()}");
+            Console.WriteLine($"O total do pedido é: R${exemploFarmacia.ApresentarTotalPedido()}");
+            Console.WriteLine($"O total do pedido por categoria é: {exemploFarmacia.ApresentarTotalPedidoPorCategoriaProduto()}");
+            Console.WriteLine($"A quantidade de produtos do pedido por categoria é: {exemploFarmacia.ApresentarQuantidadeProdutoPorCategoria()}");
+            Console.WriteLine($"O produto mais caro é: {exemploFarmacia.ApresentarNomeProdutoMaisCaro()}");
+            Console.WriteLine($"O produto mais barato é: {exemploFarmacia.ApresentarNomeJuntoDaCategoriaProdutoMaisBarato()}");
 
         }
     }

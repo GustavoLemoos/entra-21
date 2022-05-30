@@ -48,7 +48,7 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio04
         public string NomeProduto3;
         public double PrecoProduto3;
         public string CategoriaProduto3;
-      
+
         public double ApresentarTotalPedido()
         {
             var totalPedido = PrecoProduto1 + PrecoProduto2 + PrecoProduto3;
@@ -57,24 +57,110 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio04
             return totalPedido;
         }
 
-        //public double ApresentarTotalPedidoPorCategoriaProduto()
-        //{
+        public string ApresentarTotalPedidoPorCategoriaProduto()
+        {
+            var totalPedidoPorCategoria1 = 0.0;
+            var totalPedidoPorCategoria2 = 0.0;
+            var totalPedidoPorCategoria3 = 0.0;
+            string totalPedidoPorCategoria;
+            if (CategoriaProduto1 == CategoriaProduto2 && CategoriaProduto1 == CategoriaProduto3)
+            {
+                totalPedidoPorCategoria1 = PrecoProduto1 + PrecoProduto2 + PrecoProduto3;
+                totalPedidoPorCategoria = CategoriaProduto1 + "é R$" + totalPedidoPorCategoria1;
+            }
+            else if (CategoriaProduto1 == CategoriaProduto2 && CategoriaProduto1 != CategoriaProduto3)
+            {
+                totalPedidoPorCategoria1 = PrecoProduto1 + PrecoProduto2;
+                totalPedidoPorCategoria2 = PrecoProduto3;
+                totalPedidoPorCategoria = CategoriaProduto1 + " é R$" + totalPedidoPorCategoria1 + " e " + CategoriaProduto2 + " é R$" +
+                    totalPedidoPorCategoria2;
+            }
+            else if (CategoriaProduto1 != CategoriaProduto2 && CategoriaProduto2 == CategoriaProduto3)
+            {
+                totalPedidoPorCategoria1 = PrecoProduto1;
+                totalPedidoPorCategoria2 = PrecoProduto2 + PrecoProduto3;
+                totalPedidoPorCategoria = CategoriaProduto1 + " é R$" + totalPedidoPorCategoria1 + " e " + CategoriaProduto2 + " é R$" +
+                    totalPedidoPorCategoria2;
+            }
+            else if (CategoriaProduto1 != CategoriaProduto2 && CategoriaProduto1 == CategoriaProduto3)
+            {
+                totalPedidoPorCategoria1 = PrecoProduto1 + PrecoProduto3;
+                totalPedidoPorCategoria2 = PrecoProduto2;
+                totalPedidoPorCategoria = CategoriaProduto1 + " é R$" + totalPedidoPorCategoria1 + " e " + CategoriaProduto2 + " é R$" +
+                    totalPedidoPorCategoria2;
+            }
+            else
+            {
+                totalPedidoPorCategoria1 = PrecoProduto1;
+                totalPedidoPorCategoria2 = PrecoProduto2;
+                totalPedidoPorCategoria3 = PrecoProduto3;
+                totalPedidoPorCategoria = CategoriaProduto1 + " é R$" + totalPedidoPorCategoria1 + " e " + CategoriaProduto2 + " é R$" +
+                    totalPedidoPorCategoria2 + " e " + CategoriaProduto3 + " é R$" + totalPedidoPorCategoria3;
+            }
+            return totalPedidoPorCategoria;
+        }
 
-        //}
+        public string ApresentarQuantidadeProdutoPorCategoria()
+        {
 
-        //public int ApresentarQuantidadeProdutoPorCategoria()
-        //{
+            string quantidadePedidoPorCategoria;
+            if (NomeProduto1 == NomeProduto2 && NomeProduto1 == NomeProduto3)
+            {
+                quantidadePedidoPorCategoria = CategoriaProduto1 + " é " + 3;
+            }
+            else if (NomeProduto1 == NomeProduto2 && NomeProduto1 != NomeProduto3)
+            {
+                quantidadePedidoPorCategoria = CategoriaProduto1 + " é " + 2 + " e " + CategoriaProduto3 + " é " + 1;
+            }
+            else if (NomeProduto1 != NomeProduto2 && NomeProduto2 == NomeProduto3)
+            {
+                quantidadePedidoPorCategoria = CategoriaProduto1 + " é " + 1 + " e " + CategoriaProduto2 + " é " + 2;
+            }
+            else if (NomeProduto1 != NomeProduto2 && NomeProduto1 == NomeProduto3)
+            {
+                quantidadePedidoPorCategoria = CategoriaProduto1 + " é " + 2 + " e " + CategoriaProduto2 + " é " + 1;
+            }
+            else
+            {
+                quantidadePedidoPorCategoria = CategoriaProduto1 + " é " + 1 + " e " + CategoriaProduto2 + " é " + 1 + " e " + CategoriaProduto3 + " é " + 1;
+            }
+            return quantidadePedidoPorCategoria;
+        }
 
-        //}
+        public string ApresentarNomeProdutoMaisCaro()
+        {
+            var produtoMaisCaro = "";
+            if (PrecoProduto1 >= PrecoProduto2 && PrecoProduto1 >= PrecoProduto3)
+            {
+                produtoMaisCaro = NomeProduto1;
+            }
+            else if (PrecoProduto2 >= PrecoProduto1 && PrecoProduto2 >= PrecoProduto3)
+            {
+                produtoMaisCaro = NomeProduto2;
+            }
+            else 
+            {
+                produtoMaisCaro = NomeProduto3;
+            }
+            return produtoMaisCaro;
+        }
 
-        //public string ApresentarNomeProdutoMaisCaro()
-        //{
-
-        //}
-
-        //public string ApresentarNomeJuntoDaCategoriaProdutoMaisBarato()
-        //{
-
-        //}
+        public string ApresentarNomeJuntoDaCategoriaProdutoMaisBarato()
+        {
+            var produtoMaisBarato = "";
+            if (PrecoProduto1 <= PrecoProduto2 && PrecoProduto1 <= PrecoProduto3)
+            {
+                produtoMaisBarato = NomeProduto1 + "e sua categoria é " + CategoriaProduto1;
+            }
+            else if (PrecoProduto2 >= PrecoProduto1 && PrecoProduto2 >= PrecoProduto3)
+            {
+                produtoMaisBarato = NomeProduto2 + "e sua categoria é " + CategoriaProduto2;
+            }
+            else
+            {
+                produtoMaisBarato = NomeProduto3 + " e sua categoria é " + CategoriaProduto3;
+            }
+            return produtoMaisBarato;
+        }
     }
 }
