@@ -102,7 +102,7 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio04
 
         public string ApresentarQuantidadeProdutoPorCategoria()
         {
-
+            
             string quantidadePedidoPorCategoria;
             if (NomeProduto1 == NomeProduto2 && NomeProduto1 == NomeProduto3)
             {
