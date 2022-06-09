@@ -97,7 +97,7 @@ namespace Entra21.ExerciciosLista.ExemplosListasObjetos
             var precoUnitario = Convert.ToDouble(Console.ReadLine());
 
             Console.WriteLine(@"Localizações disponíveis: 
-- Armázem
+- Armazem
 - Area Venda
 - Loja");
             Console.Write("Localização: ");
