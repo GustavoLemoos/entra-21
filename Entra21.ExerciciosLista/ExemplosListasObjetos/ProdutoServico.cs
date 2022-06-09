@@ -9,8 +9,9 @@ namespace Entra21.ExerciciosLista.ExemplosListasObjetos
     internal class ProdutoServico
     {
         private List<Produto> produtos = new List<Produto>();
+        private int codigoAtual = 1;
         // encapsulamento + tipoRetorno + NomeMetodo(parametros)
-        // parametro -> "Supri necessidade do método"
+        // parametro -> "Suprir necessidade do método"
         public void Adicionar(string nome, double precoUnitario, ProdutoLocalizacao localizacao, int quantidade)
         {
             // Instanciar um objeto da classe Produto
@@ -22,16 +23,40 @@ namespace Entra21.ExerciciosLista.ExemplosListasObjetos
             produto.Localizacao = localizacao;
             produto.Quantidade = quantidade;
 
+            // Atribuir o código novo para o objeto do produto
+            produto.Codigo = codigoAtual;
+
+
+            // Adicionar 1 no código atual para quando criar um novo produto o produto conter outro código
+            produto.Codigo = codigoAtual;
+
             // Adicionar o produto instanciado na lista de produtos
             produtos.Add(produto);
+
         }
 
-        public void Editar()
+        public bool Editar(int codigoParaAlterar, string nome, double precoUnitario, ProdutoLocalizacao localizacao, int quantidade)
         {
+            // Obtém o produto desejado da lista de produtos
+            Produto produtoParaAlterar = ObterPorCodigo(codigoParaAlterar);
 
+            // Verifica se não foi possível encontrar o produto
+            if (produtoParaAlterar == null)
+            {
+                // Retorna falso, pois não existe produto com o código dos parâmetros
+                return false;
+            }
+
+            produtoParaAlterar.Nome = nome;
+            produtoParaAlterar.Localizacao = localizacao;
+            produtoParaAlterar.PrecoUnitario = precoUnitario;
+            produtoParaAlterar.Quantidade = quantidade;
+
+            // Retorna verdadeiro, pois foi possível alterar o produto
+            return true;
         }
 
-        public void Apagar(int codigo)
+        public bool Apagar(int codigo)
         {
             for (int i = 0; i < produtos.Count; i++)
             {
@@ -47,8 +72,13 @@ namespace Entra21.ExerciciosLista.ExemplosListasObjetos
 
                     // Posso remover com o objeto desejado
                     produtos.Remove(produto);
+                    // Retorna true, pois o produto com o codigo desejado foi removido da lista
+                    return true;
                 }
+
             }
+            // Retorna false, pois não foi encontrado produto com o código desejado, ou seja, nenhum elemento foi removido da lista
+            return false;
         }
 
         public List<Produto> ObterTodos()
