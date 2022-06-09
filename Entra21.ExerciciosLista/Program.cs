@@ -25,7 +25,6 @@
 //    exercicio03.Executar();
 //}
 
-using ConsoleApp1;
 using Entra21.ExerciciosLista.ExemplosListasObjetos;
 
 ProdutoControlador controlador = new ProdutoControlador();
