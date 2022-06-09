@@ -96,6 +96,10 @@ namespace Entra21.ExerciciosLista.ExemplosListasObjetos
             Console.Write("Preço unitário: ");
             var precoUnitario = Convert.ToDouble(Console.ReadLine());
 
+            Console.WriteLine(@"Localizações disponíveis: 
+- Armázem
+- Area Venda
+- Loja");
             Console.Write("Localização: ");
             var localizacao = Console.ReadLine();
 
@@ -125,7 +129,7 @@ namespace Entra21.ExerciciosLista.ExemplosListasObjetos
 
             if (produtos.Count == 0)
             {
-                Console.WriteLine("Nenhum produto cadastrado :");
+                Console.WriteLine("Nenhum produto cadastrado");
                 // Parar a execução do método
                 return;
             }
