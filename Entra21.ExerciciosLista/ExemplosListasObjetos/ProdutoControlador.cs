@@ -17,6 +17,39 @@ namespace Entra21.ExerciciosLista.ExemplosListasObjetos
             ApresentarProdutos();
         }
 
+        private int ApresentarSolicitarMenu()
+        {
+            Console.WriteLine(@"MENU:
+1 - Listar todos
+2 - Cadastrar
+3 - Editar
+4 - Apagar
+5 - Apresentar produto desejado
+6 Sair");
+
+            int codigo = SolicitarCodigo();
+
+            return codigo;
+        }
+
+        private int SolicitarCodigo()
+        {
+            int codigo = 0;
+            while (codigo < 1 && codigo >= 6)
+            {
+                try
+                {
+                    Console.Write("Digite o código: ");
+                    codigo = Convert.ToInt32(Console.ReadLine());
+                }
+                catch
+                {
+                    Console.WriteLine("Digite um menu válido");
+                }
+            }
+
+            return codigo;
+        }
         private void Cadastrar()
         {
             Console.Write("Nome: ");
