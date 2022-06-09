@@ -11,6 +11,39 @@ namespace Entra21.ExerciciosLista.ExemplosListasObjetos
         private ProdutoServico produtoServico = new ProdutoServico();
         public void GerenciarMenu()
         {
+            int codigo = 0;
+            // Repete enquanto o código não for o menu sair(6)
+            while (codigo != 6)
+            {
+                // apresenta o menu e solicita o código
+                codigo = ApresentarSolicitarMenu();
+
+                if (codigo == 1)
+                {
+                    // Menu escolhido para listar produto
+                    ApresentarProdutos();
+                }
+                else if (codigo == 2)
+                {
+                    // Menu escolhido para cadastrar produto
+                    Cadastrar();
+                }
+                else if (codigo == 3)
+                {
+                    // Menu escolhido para editar produto
+                    //Editar();
+                }
+                else if (codigo == 4)
+                {
+                    // Menu escolhido para apagar produto
+                    //Apagar();
+                }
+                else if (codigo == 5)
+                {
+                    // Menu escolhido para apresentar produto
+                    //ApresentarProduto();
+                }
+            }
             Cadastrar();
             ApresentarProdutos();
             Cadastrar();
@@ -36,7 +69,7 @@ namespace Entra21.ExerciciosLista.ExemplosListasObjetos
         {
             int codigo = 0;
             // Continua solicitando o código até que seja um código entre 1 e 6
-            while (codigo < 1 && codigo >= 6)
+            while (codigo < 1 || codigo >= 6)
             {
                 try
                 {
