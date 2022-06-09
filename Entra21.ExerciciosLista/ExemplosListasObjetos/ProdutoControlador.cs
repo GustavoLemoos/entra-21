@@ -15,8 +15,11 @@ namespace Entra21.ExerciciosLista.ExemplosListasObjetos
             // Repete enquanto o código não for o menu sair(6)
             while (codigo != 6)
             {
+                Console.Clear();
                 // apresenta o menu e solicita o código
                 codigo = ApresentarSolicitarMenu();
+
+                Console.Clear();
 
                 if (codigo == 1)
                 {
@@ -43,11 +46,9 @@ namespace Entra21.ExerciciosLista.ExemplosListasObjetos
                     // Menu escolhido para apresentar produto
                     //ApresentarProduto();
                 }
+                Thread.Sleep(1000);
             }
-            Cadastrar();
-            ApresentarProdutos();
-            Cadastrar();
-            ApresentarProdutos();
+
         }
 
         private int ApresentarSolicitarMenu()
@@ -69,7 +70,7 @@ namespace Entra21.ExerciciosLista.ExemplosListasObjetos
         {
             int codigo = 0;
             // Continua solicitando o código até que seja um código entre 1 e 6
-            while (codigo < 1 || codigo >= 6)
+            while (codigo < 1 || codigo > 6)
             {
                 try
                 {
