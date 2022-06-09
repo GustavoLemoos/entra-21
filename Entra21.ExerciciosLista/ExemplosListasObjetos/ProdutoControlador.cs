@@ -123,6 +123,15 @@ namespace Entra21.ExerciciosLista.ExemplosListasObjetos
         {
             var produtos = produtoServico.ObterTodos();
 
+            if (produtos.Count == 0)
+            {
+                Console.WriteLine("Nenhum produto cadastrado :");
+                // Parar a execução do método
+                return;
+            }
+
+            Console.WriteLine("Lista de Produtos");
+
             for (var i = 0; i < produtos.Count; i++)
             {
                 var produtoAtual = produtos[i];
