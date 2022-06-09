@@ -35,6 +35,7 @@ namespace Entra21.ExerciciosLista.ExemplosListasObjetos
         private int SolicitarCodigo()
         {
             int codigo = 0;
+            // Continua solicitando o código até que seja um código entre 1 e 6
             while (codigo < 1 && codigo >= 6)
             {
                 try
