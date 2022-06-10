@@ -44,11 +44,37 @@ namespace Entra21.ExerciciosLista.ExemplosListasObjetos
                 else if (codigo == 5)
                 {
                     // Menu escolhido para apresentar produto
-                    //ApresentarProduto();
+                    ApresentarProduto();
                 }
-                Thread.Sleep(1000);
+                Console.WriteLine("\n\nAperte alguma tecla para continuar...");
+                Console.ReadKey();
             }
 
+        }
+
+        private void ApresentarProduto()
+        {
+            ApresentarProdutos();
+
+            Console.Write("Digite o código do produto a ser detalhado: ");
+            int codigo = Convert.ToInt32(Console.ReadLine());
+
+            var produto = produtoServico.ObterPorCodigo(codigo);
+
+            // Verifica se o produto não está cadastraddo na lista de produtos
+            if (produto == null)
+            {
+                Console.WriteLine("Produto não cadastrado");
+
+                return;
+            }
+
+            Console.Clear();
+            Console.WriteLine(@$"Código: {produto.Codigo}
+Nome: {produto.Nome} 
+Preço unitário {produto.PrecoUnitario}
+Quantidade: {produto.Quantidade}
+Total: {produto.CalcularPrecoTotal()}");
         }
 
         private void Apagar()
