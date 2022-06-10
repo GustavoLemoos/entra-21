@@ -34,12 +34,12 @@ namespace Entra21.ExerciciosLista.ExemplosListasObjetos
                 else if (codigo == 3)
                 {
                     // Menu escolhido para editar produto
-                    //Editar();
+                    Editar();
                 }
                 else if (codigo == 4)
                 {
                     // Menu escolhido para apagar produto
-                    //Apagar();
+                    Apagar();
                 }
                 else if (codigo == 5)
                 {
@@ -51,6 +51,55 @@ namespace Entra21.ExerciciosLista.ExemplosListasObjetos
 
         }
 
+        private void Apagar()
+        {
+            ApresentarProdutos();
+
+            Console.WriteLine("Digite o código do produto para apagar: ");
+            int codigo = Convert.ToInt32(Console.ReadLine());
+
+            var registroApagado = produtoServico.Apagar(codigo);
+
+            Console.WriteLine(registroApagado == true
+                ? "Registro removido com sucesso"
+                : "Nenhum produto cadastrado com o código informado");
+        }
+        private void Editar()
+        {
+            ApresentarProdutos();
+
+            Console.WriteLine("Código produto desejado: ");
+            var codigo = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Nome: ");
+            var nome = Console.ReadLine();
+
+            Console.Write("Quantidade: ");
+            var quantidade = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Preço unitário: ");
+            var precoUnitario = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine(@"Localizações disponíveis:
+- Armazem
+- Area Venda
+- Loja");
+            Console.Write("Localização: ");
+            var localizacao = Console.ReadLine();
+
+            var localizacaoProduto = ObterLocalizacaoProduto(localizacao);
+
+            var alterou = produtoServico.Editar(codigo, nome, precoUnitario, localizacaoProduto, quantidade);
+
+            if (alterou == false)
+            {
+                Console.WriteLine("Código digitado não existe");
+            }
+            else 
+            {
+                Console.WriteLine("Produto alterado com sucesso");
+            }
+        }
         private int ApresentarSolicitarMenu()
         {
             Console.WriteLine(@"MENU:
@@ -140,7 +189,7 @@ namespace Entra21.ExerciciosLista.ExemplosListasObjetos
             {
                 var produtoAtual = produtos[i];
 
-                Console.WriteLine("Nome: " + produtoAtual.Nome + " Preço unitário: " + produtoAtual.PrecoUnitario);
+                Console.WriteLine("\nCódigo: " + produtoAtual.Codigo + "\nNome: " + produtoAtual.Nome + "\n");
             }
         }
     }
