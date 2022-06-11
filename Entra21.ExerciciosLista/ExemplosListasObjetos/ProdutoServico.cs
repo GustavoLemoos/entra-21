@@ -99,5 +99,72 @@
             // Retorna null, caso não encontre um produto com o código passado como parâmetro
             return null;
         }
+
+        public Produto ObterMenorPrecoUnitario()
+        {
+            double menorPrecoUnitario = double.MaxValue;
+            Produto produtoMenorPrecoUnitario = null;
+
+            for (int i = 0; i < produtos.Count; i++)
+            {
+                Produto produto = produtos[i];
+
+                if (produto.PrecoUnitario < menorPrecoUnitario)
+                {
+                    menorPrecoUnitario = produto.PrecoUnitario;
+
+                    produtoMenorPrecoUnitario = produto;
+                }
+            }
+            return produtoMenorPrecoUnitario;
+        }
+
+        public List<double> ObterTodosPrecos()
+        {
+            var precos = new List<double>();
+
+            for (int i = 0; i < produtos.Count; i++)
+            {
+                var produto = produtos[i];
+
+                precos.Add(produto.CalcularPrecoTotal());
+            }
+
+            return precos;
+        }
+
+        public List<double> ObterPrecosTotaisFiltrandoPorLocalizacao(ProdutoLocalizacao localizacao)
+        {
+            var precos = new List<double>();
+
+            for (int i = 0; i < produtos.Count; i++)
+            {
+                var produto = produtos[i];
+
+                if (produto.Localizacao == localizacao)
+                {
+                    precos.Add(produto.CalcularPrecoTotal());
+                }
+            }
+
+            return precos;
+        }
+
+        public List<double> ObterPrecosTotaisDoArmazem()
+        {
+            var precos = new List<double>();
+
+            for (int i = 0; i < produtos.Count; i++)
+            {
+                var produto = produtos[i];
+
+                if (produto.Localizacao == ProdutoLocalizacao.Armazem)
+                {
+                    precos.Add(produto.CalcularPrecoTotal());
+                }
+            }
+
+            return precos;
+        }
     }
 }
