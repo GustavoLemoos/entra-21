@@ -166,5 +166,20 @@
 
             return precos;
         }
+
+        public double ObterMediaPrecosTotais()
+        {
+            var somaPrecosTotais = 0.0;
+            for (int i = 0; i < produtos.Count; i++)
+            {
+                var produto = produtos[i];
+
+                somaPrecosTotais += produto.CalcularPrecoTotal();
+            }
+
+            var media = somaPrecosTotais / produtos.Count;
+
+            return media;
+        }
     }
 }
