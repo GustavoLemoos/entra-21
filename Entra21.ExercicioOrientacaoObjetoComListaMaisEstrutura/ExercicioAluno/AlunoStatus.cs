@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Entra21.ExercicioOrientacaoObjetoComListaMaisEstrutura.ExercicioAluno
 {
-    internal class AlunoStatus
+    public enum AlunoStatus
     {
+        Aprovado,
+        EmExame,
+        Reprovado
     }
 }
