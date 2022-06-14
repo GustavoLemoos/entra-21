@@ -31,7 +31,7 @@ namespace Entra21.ExercicioOrientacaoObjetoComListaMaisEstrutura.ExercicioAluno
             }
             else if (CalcularMedia() < 5.00)
             {
-                
+
                 alunoStatus = AlunoStatus.Reprovado;
             }
             return alunoStatus;

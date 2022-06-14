@@ -45,9 +45,86 @@ namespace Entra21.ExercicioOrientacaoObjetoComListaMaisEstrutura.ExercicioAluno
 
         public bool EditarDadosCadastrais(int codigoMatricula, string nome, int idade, string materiaFavorita)
         {
-
+            for (var i = 0; i < alunos.Count(); i++)
+            {
+                Aluno alunoAtual = alunos[i];
+                if (alunoAtual.CodigoMatricula == codigoMatricula)
+                {
+                    alunoAtual.Nome = nome;
+                    alunoAtual.Idade = idade;
+                    alunoAtual.MateriaFavorita = materiaFavorita;
+                    return true;
+                }
+            }
             return false;
         }
 
+        public bool EditarNotasAluno(int codigoMatricula, double nota1, double nota2, double nota3)
+        {
+            for (var i = 0; i < alunos.Count(); i++)
+            {
+                Aluno alunoAtual = alunos[i];
+                if (alunoAtual.CodigoMatricula == codigoMatricula)
+                {
+                    alunoAtual.Nota1 = nota1;
+                    alunoAtual.Nota2 = nota2;
+                    alunoAtual.Nota3 = nota3;
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public List<string> ObterNomes()
+        {
+            List<string> nomes = new List<string>();
+            for (var i = 0; i < alunos.Count(); i++)
+            {
+                nomes.Add(alunos[i].Nome);
+            }
+            return nomes;
+        }
+
+        public List<string> ObterAprovados()
+        {
+            List<string> aprovados = new List<string>();
+            for (var i = 0; i < alunos.Count(); i++)
+            {
+                var alunoAtual = alunos[i];
+                if (alunoAtual.ObterStatus() == AlunoStatus.Aprovado)
+                {
+                    aprovados.Add(alunoAtual.Nome);
+                }
+            }
+            return aprovados;
+        }
+
+        public List<string> ObterReprovados()
+        {
+            List<string> reprovados = new List<string>();
+            for (var i = 0; i < alunos.Count(); i++)
+            {
+                var alunoAtual = alunos[i];
+                if (alunoAtual.ObterStatus() == AlunoStatus.Reprovado)
+                {
+                    reprovados.Add(alunoAtual.Nome);
+                }
+            }
+            return reprovados;
+        }
+
+        public List<string> ObterEmExame()
+        {
+            List<string> alunosEmExame = new List<string>();
+            for (var i = 0; i < alunos.Count(); i++)
+            {
+                var alunoAtual = alunos[i];
+                if (alunoAtual.ObterStatus() == AlunoStatus.EmExame)
+                {
+                    alunosEmExame.Add(alunoAtual.Nome);
+                }
+            }
+            return alunosEmExame;
+        }
     }
 }
