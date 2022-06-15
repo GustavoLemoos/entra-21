@@ -9,6 +9,111 @@ namespace Entra21.ExercicioOrientacaoObjetoComListaMaisEstrutura.ExercicioAluno
     internal class AlunoControlador
     {
         AlunoServico alunoServico = new AlunoServico();
+
+        public void ApresentarMenu()
+        {
+            int codigo = 0;
+            while (codigo != 13)
+            {
+                Console.Clear();
+                codigo = ApresentarSolicitarMenu();
+
+                Console.Clear();
+
+                if (codigo == 1)
+                {
+                    Cadastrar();
+                }
+                else if (codigo == 2)
+                {
+                    Apagar();
+                }
+                else if (codigo == 3)
+                {
+                    ApresentarAlunos();
+                }
+                else if (codigo == 4)
+                {
+                    EditarDadosCadastraisAluno();
+                }
+                else if (codigo == 5)
+                {
+                    EditarNotasAlunoControlador();
+                }
+                else if (codigo == 6)
+                {
+                    ListarAlunos();
+                }
+                else if (codigo == 7)
+                {
+                    ListarAlunosAprovados();
+                }
+                else if (codigo == 8)
+                {
+                    ListarAlunosReprovados();
+                }
+                else if (codigo == 9)
+                {
+                    ListarAlunosEmExame();
+                }
+                else if (codigo == 10)
+                {
+                    VisualizarMediaAluno();
+                }
+                else if (codigo == 11)
+                {
+                    VisualizarStatusAluno();
+                }
+                else if (codigo == 12)
+                {
+                    VisualizarStatusAluno();
+                }
+                Console.WriteLine("\n\nAperte alguma tecla para continuar...");
+                Console.ReadKey();
+            }
+        }
+
+        private int ApresentarSolicitarMenu()
+        {
+            Console.WriteLine(@"MENU:
+1 - Cadastrar
+2 - Apagar
+3 - Apresentr alunos
+4 - Editar dados cadastrais do aluno
+5 - Editar notas do aluno
+6 - Listar todos alunos
+7 - Listar alunos aprovados
+8 - Listar alunos reprovados
+9 - Listar alunos em exame
+10 - Visualizar média do aluno
+11 - Visualizar status do aluno
+12 - Visualizar média das idades
+13 - Sair");
+
+            int codigo = SolicitarCodigo();
+
+            return codigo;
+        }
+
+        private int SolicitarCodigo()
+        {
+            int codigo = 0;
+            while (codigo < 1 || codigo > 6)
+            {
+                try
+                {
+                    Console.Write("Digite o código: ");
+                    codigo = Convert.ToInt32(Console.ReadLine());
+                }
+                catch
+                {
+                    Console.WriteLine("Digite um menu válido");
+                }
+            }
+
+            return codigo;
+        }
+
         private void Cadastrar()
         {
             Console.WriteLine("Digite o nome: ");
@@ -99,7 +204,7 @@ namespace Entra21.ExercicioOrientacaoObjetoComListaMaisEstrutura.ExercicioAluno
                 : "Código do aluno editado não foi encontrado");
         }
 
-        public void ListarAlunos()
+        private void ListarAlunos()
         {
             var listaAlunos = alunoServico.ObterNomes();
             if (listaAlunos.Count() != 0)
@@ -116,7 +221,7 @@ namespace Entra21.ExercicioOrientacaoObjetoComListaMaisEstrutura.ExercicioAluno
             }
         }
 
-        public void ListarAlunosAprovados()
+        private void ListarAlunosAprovados()
         {
             var listaAlunosAprovados = alunoServico.ObterAprovados();
             if (listaAlunosAprovados.Count() != 0)
@@ -133,7 +238,7 @@ namespace Entra21.ExercicioOrientacaoObjetoComListaMaisEstrutura.ExercicioAluno
             }
         }
 
-        public void ListarAlunosReprovados()
+        private void ListarAlunosReprovados()
         {
             var listaAlunosReprovados = alunoServico.ObterReprovados();
             if (listaAlunosReprovados.Count() != 0)
@@ -150,7 +255,7 @@ namespace Entra21.ExercicioOrientacaoObjetoComListaMaisEstrutura.ExercicioAluno
             }
         }
 
-        public void ListarAlunosEmExame()
+        private void ListarAlunosEmExame()
         {
             var listaAlunosEmExame = alunoServico.ObterEmExame();
             if (listaAlunosEmExame.Count() != 0)
@@ -165,6 +270,32 @@ namespace Entra21.ExercicioOrientacaoObjetoComListaMaisEstrutura.ExercicioAluno
             {
                 Console.WriteLine("Não há alunos cadastrados");
             }
+        }
+
+        private void VisualizarMediaAluno()
+        {
+            ApresentarAlunos();
+            Console.WriteLine("");
+            Console.WriteLine("Digite o código de matrícula do aluno desejado: ");
+            var codigoMatricula = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("A média do aluno é: ");
+            alunoServico.ObterMediaPorCodigoMatricula(codigoMatricula);
+        }
+
+        private void VisualizarStatusAluno()
+        {
+            ApresentarAlunos();
+            Console.WriteLine("");
+            Console.WriteLine("Digite o código de matrícula do aluno desejado: ");
+            var codigoMatricula = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("O status do aluno é: ");
+            alunoServico.ObterStatusPorCodigoMatricula(codigoMatricula);
+        }
+
+        private void VisualizarMediaIdades()
+        {
+            Console.WriteLine("A média de idades é: ");
+            alunoServico.ObterMediaIdades();
         }
     }
 }

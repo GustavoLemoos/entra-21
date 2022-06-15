@@ -126,5 +126,48 @@ namespace Entra21.ExercicioOrientacaoObjetoComListaMaisEstrutura.ExercicioAluno
             }
             return alunosEmExame;
         }
+
+        public double ObterMediaPorCodigoMatricula(int codigoMatricula)
+        {
+            for (var i = 0; i < alunos.Count(); i++)
+            {
+                var alunoAtual = alunos[i];
+                if (alunoAtual.CodigoMatricula == codigoMatricula)
+                {
+                    var media = alunoAtual.CalcularMedia();
+                    return media;
+                }
+            }
+            return 0.00;
+        }
+
+        public AlunoStatus ObterStatusPorCodigoMatricula(int codigoMatricula)
+        {
+            for (var i = 0; i < alunos.Count(); i++)
+            {
+                var alunoAtual = alunos[i];
+                if (alunoAtual.CodigoMatricula == codigoMatricula)
+                {
+                    var status = alunoAtual.ObterStatus();
+                    return status;
+                }
+            }
+            return AlunoStatus.Aprovado;
+        }
+
+        public double ObterMediaIdades()
+        {
+            var mediaIdades = 0;
+            for (var i = 0; i < alunos.Count(); i++)
+            {
+                var alunoAtual = alunos[i];
+                mediaIdades += alunos[i].Idade;
+                if (i == alunos.Count())
+                {
+                    mediaIdades = mediaIdades / i;
+                }
+            }
+            return mediaIdades;
+        }
     }
 }
