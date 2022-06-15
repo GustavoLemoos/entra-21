@@ -13,7 +13,7 @@ namespace Entra21.ExercicioOrientacaoObjetoComListaMaisEstrutura.ExercicioAluno
         public void GerenciarMenu()
         {
             int codigo = 0;
-            while (codigo != 13)
+            while (codigo != 14)
             {
                 Console.Clear();
                 codigo = ApresentarSolicitarMenu();
@@ -68,6 +68,10 @@ namespace Entra21.ExercicioOrientacaoObjetoComListaMaisEstrutura.ExercicioAluno
                 {
                     VisualizarStatusAluno();
                 }
+                else
+                {
+                    break;
+                }
                 Console.WriteLine("\n\nAperte alguma tecla para continuar...");
                 Console.ReadKey();
             }
@@ -98,7 +102,7 @@ namespace Entra21.ExercicioOrientacaoObjetoComListaMaisEstrutura.ExercicioAluno
         private int SolicitarCodigo()
         {
             int codigo = 0;
-            while (codigo < 1 || codigo > 12)
+            while (codigo < 1 || codigo > 13)
             {
                 try
                 {
