@@ -78,7 +78,7 @@ namespace Entra21.ExercicioOrientacaoObjetoComListaMaisEstrutura.ExercicioAluno
             Console.WriteLine(@"MENU:
 1 - Cadastrar
 2 - Apagar
-3 - Apresentr alunos
+3 - Apresentar alunos
 4 - Editar dados cadastrais do aluno
 5 - Editar notas do aluno
 6 - Listar todos alunos
@@ -158,6 +158,10 @@ namespace Entra21.ExercicioOrientacaoObjetoComListaMaisEstrutura.ExercicioAluno
                     Console.WriteLine("");
                     Console.WriteLine(alunoAtual.Nome);
                     Console.WriteLine(alunoAtual.CodigoMatricula);
+                    Console.WriteLine(alunoAtual.MateriaFavorita);
+                    Console.WriteLine(alunoAtual.Nota1);
+                    Console.WriteLine(alunoAtual.Nota2);
+                    Console.WriteLine(alunoAtual.Nota3);
                     Console.WriteLine("");
                 }
             }
