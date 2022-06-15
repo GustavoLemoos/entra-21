@@ -10,7 +10,7 @@ namespace Entra21.ExercicioOrientacaoObjetoComListaMaisEstrutura.ExercicioAluno
     {
         AlunoServico alunoServico = new AlunoServico();
 
-        public void ApresentarMenu()
+        public void GerenciarMenu()
         {
             int codigo = 0;
             while (codigo != 13)
