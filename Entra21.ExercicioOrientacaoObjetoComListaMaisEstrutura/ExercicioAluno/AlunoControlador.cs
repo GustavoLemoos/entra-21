@@ -98,7 +98,7 @@ namespace Entra21.ExercicioOrientacaoObjetoComListaMaisEstrutura.ExercicioAluno
         private int SolicitarCodigo()
         {
             int codigo = 0;
-            while (codigo < 1 || codigo > 6)
+            while (codigo < 1 || codigo > 12)
             {
                 try
                 {
