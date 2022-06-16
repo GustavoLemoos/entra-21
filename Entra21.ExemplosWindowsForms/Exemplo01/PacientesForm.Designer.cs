@@ -55,7 +55,6 @@
             this.buttonApagar.TabIndex = 0;
             this.buttonApagar.Text = "Apagar";
             this.buttonApagar.UseVisualStyleBackColor = true;
-            this.buttonApagar.Click += new System.EventHandler(this.button1_Click);
             // 
             // buttonEditar
             // 
@@ -131,6 +130,7 @@
             this.buttonSalvar.TabIndex = 9;
             this.buttonSalvar.Text = "Salvar";
             this.buttonSalvar.UseVisualStyleBackColor = true;
+            this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
             // 
             // dataGridView1
             // 
@@ -210,7 +210,6 @@
             this.Name = "PacientesForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro do Paciente";
-            this.Load += new System.EventHandler(this.PacientesForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

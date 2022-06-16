@@ -17,14 +17,23 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonSalvar_Click(object sender, EventArgs e)
         {
+            // Obter as informações dos campos
+            var nome = textBoxNome.Text.Trim();
+            var altura = Convert.ToDouble(textBoxAltura.Text.Trim());
+            var peso = Convert.ToDouble(textBoxAltura.Text.Trim());
 
-        }
+            // Calcular imc
+            var imc = peso / (altura * altura);
 
-        private void PacientesForm_Load(object sender, EventArgs e)
-        {
 
+            // Adicionar linha
+            dataGridView1.Rows.Add(new object[]
+            {
+                "1", nome, altura, peso, imc
+            }
+            );
         }
     }
 }
