@@ -12,6 +12,7 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
 {
     public partial class PacientesForm : Form
     {
+        private int codigo = 1;
         public PacientesForm()
         {
             InitializeComponent();
@@ -31,7 +32,7 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
             // Adicionar linha
             dataGridView1.Rows.Add(new object[]
             {
-                "1", nome, altura, peso, imc
+                codigo++, nome, altura, peso, imc
             }
             );
         }
@@ -56,6 +57,29 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
                 // Remove a linha utilizando o índice do DataGridView
                 dataGridView1.Rows.RemoveAt(indiceLinhaSelecionada);
             }
+        }
+
+        private void buttonEditar_Click(object sender, EventArgs e)
+        {
+            var indiceLinhaSelecionada = dataGridView1.SelectedRows[0].Index;
+            if (indiceLinhaSelecionada == -1)
+            {
+                MessageBox.Show("Selecione um nome");
+                return;
+            }
+
+            // Obter a linha que o usuário selecionou
+            var linhaSelecionada = dataGridView1.SelectedRows[0];
+
+            // Obter a informação da linha selecionada passando a coluna desejada
+            var codigo = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
+            var nome = linhaSelecionada.Cells[1].Value.ToString();
+            var altura = Convert.ToDouble(linhaSelecionada.Cells[2].Value);
+            var peso = Convert.ToDouble(linhaSelecionada.Cells[3].Value);
+
+            textBoxNome.Text = nome;
+            textBoxAltura.Text = altura.ToString();
+            textBoxPeso.Text = peso.ToString();
         }
     }
 }
