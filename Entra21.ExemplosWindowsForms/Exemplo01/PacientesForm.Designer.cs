@@ -30,14 +30,21 @@
         {
             this.buttonApagar = new System.Windows.Forms.Button();
             this.buttonEditar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelNome = new System.Windows.Forms.Label();
             this.textBoxNome = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelAltura = new System.Windows.Forms.Label();
             this.textBoxAltura = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.labelPeso = new System.Windows.Forms.Label();
             this.textBoxPeso = new System.Windows.Forms.TextBox();
             this.labelImc = new System.Windows.Forms.Label();
             this.buttonSalvar = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ColumnCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnAltura = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPeso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnImc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonApagar
@@ -59,14 +66,14 @@
             this.buttonEditar.Text = "Editar";
             this.buttonEditar.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // labelNome
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(943, 77);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 20);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Nome";
+            this.labelNome.AutoSize = true;
+            this.labelNome.Location = new System.Drawing.Point(943, 77);
+            this.labelNome.Name = "labelNome";
+            this.labelNome.Size = new System.Drawing.Size(50, 20);
+            this.labelNome.TabIndex = 2;
+            this.labelNome.Text = "Nome";
             // 
             // textBoxNome
             // 
@@ -75,14 +82,14 @@
             this.textBoxNome.Size = new System.Drawing.Size(388, 27);
             this.textBoxNome.TabIndex = 3;
             // 
-            // label2
+            // labelAltura
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(943, 138);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 20);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Altura";
+            this.labelAltura.AutoSize = true;
+            this.labelAltura.Location = new System.Drawing.Point(943, 138);
+            this.labelAltura.Name = "labelAltura";
+            this.labelAltura.Size = new System.Drawing.Size(49, 20);
+            this.labelAltura.TabIndex = 4;
+            this.labelAltura.Text = "Altura";
             // 
             // textBoxAltura
             // 
@@ -91,14 +98,14 @@
             this.textBoxAltura.Size = new System.Drawing.Size(388, 27);
             this.textBoxAltura.TabIndex = 5;
             // 
-            // label3
+            // labelPeso
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(943, 201);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 20);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Peso";
+            this.labelPeso.AutoSize = true;
+            this.labelPeso.Location = new System.Drawing.Point(943, 201);
+            this.labelPeso.Name = "labelPeso";
+            this.labelPeso.Size = new System.Drawing.Size(39, 20);
+            this.labelPeso.TabIndex = 6;
+            this.labelPeso.Text = "Peso";
             // 
             // textBoxPeso
             // 
@@ -125,25 +132,86 @@
             this.buttonSalvar.Text = "Salvar";
             this.buttonSalvar.UseVisualStyleBackColor = true;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnCodigo,
+            this.ColumnNome,
+            this.ColumnAltura,
+            this.ColumnPeso,
+            this.ColumnImc});
+            this.dataGridView1.Location = new System.Drawing.Point(12, 77);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 29;
+            this.dataGridView1.Size = new System.Drawing.Size(686, 485);
+            this.dataGridView1.TabIndex = 10;
+            // 
+            // ColumnCodigo
+            // 
+            this.ColumnCodigo.HeaderText = "Código";
+            this.ColumnCodigo.MinimumWidth = 6;
+            this.ColumnCodigo.Name = "ColumnCodigo";
+            this.ColumnCodigo.ReadOnly = true;
+            this.ColumnCodigo.Width = 125;
+            // 
+            // ColumnNome
+            // 
+            this.ColumnNome.HeaderText = "Nome";
+            this.ColumnNome.MinimumWidth = 6;
+            this.ColumnNome.Name = "ColumnNome";
+            this.ColumnNome.ReadOnly = true;
+            this.ColumnNome.Width = 125;
+            // 
+            // ColumnAltura
+            // 
+            this.ColumnAltura.HeaderText = "Altura";
+            this.ColumnAltura.MinimumWidth = 6;
+            this.ColumnAltura.Name = "ColumnAltura";
+            this.ColumnAltura.ReadOnly = true;
+            this.ColumnAltura.Width = 125;
+            // 
+            // ColumnPeso
+            // 
+            this.ColumnPeso.HeaderText = "Peso";
+            this.ColumnPeso.MinimumWidth = 6;
+            this.ColumnPeso.Name = "ColumnPeso";
+            this.ColumnPeso.ReadOnly = true;
+            this.ColumnPeso.Width = 125;
+            // 
+            // ColumnImc
+            // 
+            this.ColumnImc.HeaderText = "IMC";
+            this.ColumnImc.MinimumWidth = 6;
+            this.ColumnImc.Name = "ColumnImc";
+            this.ColumnImc.ReadOnly = true;
+            this.ColumnImc.Width = 125;
+            // 
             // PacientesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1343, 588);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(this.labelImc);
             this.Controls.Add(this.textBoxPeso);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.labelPeso);
             this.Controls.Add(this.textBoxAltura);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelAltura);
             this.Controls.Add(this.textBoxNome);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelNome);
             this.Controls.Add(this.buttonEditar);
             this.Controls.Add(this.buttonApagar);
             this.Name = "PacientesForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro do Paciente";
             this.Load += new System.EventHandler(this.PacientesForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -153,13 +221,19 @@
 
         private Button buttonApagar;
         private Button buttonEditar;
-        private Label label1;
+        private Label labelNome;
         private TextBox textBoxNome;
-        private Label label2;
+        private Label labelAltura;
         private TextBox textBoxAltura;
-        private Label label3;
+        private Label labelPeso;
         private TextBox textBoxPeso;
         private Label labelImc;
         private Button buttonSalvar;
+        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn ColumnCodigo;
+        private DataGridViewTextBoxColumn ColumnNome;
+        private DataGridViewTextBoxColumn ColumnAltura;
+        private DataGridViewTextBoxColumn ColumnPeso;
+        private DataGridViewTextBoxColumn ColumnImc;
     }
 }
