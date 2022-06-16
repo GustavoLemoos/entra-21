@@ -35,5 +35,27 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
             }
             );
         }
+
+        private void buttonApagar_Click(object sender, EventArgs e)
+        {
+            // Obter o índice da linha selecionada
+            var indiceLinhaSelecionada = dataGridView1.SelectedRows[0].Index;
+
+            if (indiceLinhaSelecionada == -1)
+            {
+                MessageBox.Show("Selecione um paciente");
+                return;
+            }
+
+            var opcaoEscolhida = MessageBox.Show(
+                "Deseja realmente apagar?", "Aviso", MessageBoxButtons.YesNo);
+
+            // Verifica se o usuário escolheu realmente apagar o registro
+            if (opcaoEscolhida == DialogResult.Yes)
+            {
+                // Remove a linha utilizando o índice do DataGridView
+                dataGridView1.Rows.RemoveAt(indiceLinhaSelecionada);
+            }
+        }
     }
 }
