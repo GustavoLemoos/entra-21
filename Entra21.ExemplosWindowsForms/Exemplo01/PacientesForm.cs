@@ -12,6 +12,8 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
 {
     public partial class PacientesForm : Form
     {
+        private int indiceLinhaSelecionada = -1;
+        private int codigoSelecionado = -1;
         private int codigo = 1;
         public PacientesForm()
         {
@@ -29,12 +31,22 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
             var imc = peso / (altura * altura);
 
 
-            // Adicionar linha
-            dataGridView1.Rows.Add(new object[]
+            // Verifica se está em mode de edição
+            if (indiceLinhaSelecionada == -1)
             {
+                // Adicionar linha no dataGridView de paciente
+                dataGridView1.Rows.Add(new object[]
+                {
                 codigo++, nome, altura, peso, imc
+                });
+
+                return;
             }
-            );
+
+            dataGridView1.Rows[indiceLinhaSelecionada].Cells[1].Value = nome;
+            dataGridView1.Rows[indiceLinhaSelecionada].Cells[2].Value = altura.ToString();
+            dataGridView1.Rows[indiceLinhaSelecionada].Cells[3].Value = peso.ToString();
+            dataGridView1.Rows[indiceLinhaSelecionada].Cells[4].Value = imc.ToString();
         }
 
         private void buttonApagar_Click(object sender, EventArgs e)
@@ -61,7 +73,7 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
 
         private void buttonEditar_Click(object sender, EventArgs e)
         {
-            var indiceLinhaSelecionada = dataGridView1.SelectedRows[0].Index;
+            indiceLinhaSelecionada = dataGridView1.SelectedRows[0].Index;
             if (indiceLinhaSelecionada == -1)
             {
                 MessageBox.Show("Selecione um nome");
@@ -72,7 +84,7 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
             var linhaSelecionada = dataGridView1.SelectedRows[0];
 
             // Obter a informação da linha selecionada passando a coluna desejada
-            var codigo = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
+            codigoSelecionado = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
             var nome = linhaSelecionada.Cells[1].Value.ToString();
             var altura = Convert.ToDouble(linhaSelecionada.Cells[2].Value);
             var peso = Convert.ToDouble(linhaSelecionada.Cells[3].Value);
@@ -80,6 +92,8 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
             textBoxNome.Text = nome;
             textBoxAltura.Text = altura.ToString();
             textBoxPeso.Text = peso.ToString();
+
+
         }
     }
 }
