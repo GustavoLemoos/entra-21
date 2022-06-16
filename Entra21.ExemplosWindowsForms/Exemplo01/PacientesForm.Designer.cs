@@ -36,13 +36,13 @@
             this.textBoxAltura = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxPeso = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelImc = new System.Windows.Forms.Label();
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonApagar
             // 
-            this.buttonApagar.Location = new System.Drawing.Point(249, 153);
+            this.buttonApagar.Location = new System.Drawing.Point(849, 12);
             this.buttonApagar.Name = "buttonApagar";
             this.buttonApagar.Size = new System.Drawing.Size(94, 29);
             this.buttonApagar.TabIndex = 0;
@@ -52,7 +52,7 @@
             // 
             // buttonEditar
             // 
-            this.buttonEditar.Location = new System.Drawing.Point(149, 153);
+            this.buttonEditar.Location = new System.Drawing.Point(735, 12);
             this.buttonEditar.Name = "buttonEditar";
             this.buttonEditar.Size = new System.Drawing.Size(94, 29);
             this.buttonEditar.TabIndex = 1;
@@ -107,14 +107,14 @@
             this.textBoxPeso.Size = new System.Drawing.Size(388, 27);
             this.textBoxPeso.TabIndex = 7;
             // 
-            // label4
+            // labelImc
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(943, 258);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 20);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "IMC";
+            this.labelImc.AutoSize = true;
+            this.labelImc.Location = new System.Drawing.Point(943, 258);
+            this.labelImc.Name = "labelImc";
+            this.labelImc.Size = new System.Drawing.Size(35, 20);
+            this.labelImc.TabIndex = 8;
+            this.labelImc.Text = "IMC";
             // 
             // buttonSalvar
             // 
@@ -131,7 +131,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1343, 588);
             this.Controls.Add(this.buttonSalvar);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.labelImc);
             this.Controls.Add(this.textBoxPeso);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBoxAltura);
@@ -159,7 +159,7 @@
         private TextBox textBoxAltura;
         private Label label3;
         private TextBox textBoxPeso;
-        private Label label4;
+        private Label labelImc;
         private Button buttonSalvar;
     }
 }
