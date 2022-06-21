@@ -39,6 +39,7 @@
             this.buttonApagar = new System.Windows.Forms.Button();
             this.buttonEditar = new System.Windows.Forms.Button();
             this.comboBoxPaciente = new System.Windows.Forms.ComboBox();
+            this.buttonCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,11 +56,11 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(1, 54);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 54);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(696, 501);
+            this.dataGridView1.Size = new System.Drawing.Size(685, 501);
             this.dataGridView1.TabIndex = 1;
             // 
             // maskedTextBoxCep
@@ -138,11 +139,21 @@
             this.comboBoxPaciente.Size = new System.Drawing.Size(398, 28);
             this.comboBoxPaciente.TabIndex = 11;
             // 
+            // buttonCancelar
+            // 
+            this.buttonCancelar.Location = new System.Drawing.Point(923, 219);
+            this.buttonCancelar.Name = "buttonCancelar";
+            this.buttonCancelar.Size = new System.Drawing.Size(94, 29);
+            this.buttonCancelar.TabIndex = 12;
+            this.buttonCancelar.Text = "Cancelar";
+            this.buttonCancelar.UseVisualStyleBackColor = true;
+            // 
             // EnderecosForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1133, 567);
+            this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.comboBoxPaciente);
             this.Controls.Add(this.buttonEditar);
             this.Controls.Add(this.buttonApagar);
@@ -175,5 +186,6 @@
         private Button buttonApagar;
         private Button buttonEditar;
         private ComboBox comboBoxPaciente;
+        private Button buttonCancelar;
     }
 }
