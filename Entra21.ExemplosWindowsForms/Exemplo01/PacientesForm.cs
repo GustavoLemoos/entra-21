@@ -75,10 +75,10 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
 
         private void buttonApagar_Click(object sender, EventArgs e)
         {
-            // Obter o índice da linha selecionada
-            var indiceLinhaSelecionada = dataGridView1.SelectedRows[0].Index;
+            // Obter a quantidade de linhas que o usuário selecionou no DataGridView
+            var quantidadeLinhasSelecionadas = dataGridView1.SelectedRows.Count;
 
-            if (indiceLinhaSelecionada == -1)
+            if (quantidadeLinhasSelecionadas == 0)
             {
                 MessageBox.Show("Selecione um paciente");
                 return;
@@ -90,6 +90,8 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
             // Verifica se o usuário escolheu realmente apagar o registro
             if (opcaoEscolhida == DialogResult.Yes)
             {
+                var indiceLinhaSelecionada = dataGridView1.SelectedRows[0].Index;
+
                 // Remove a linha utilizando o índice do DataGridView
                 dataGridView1.Rows.RemoveAt(indiceLinhaSelecionada);
 
