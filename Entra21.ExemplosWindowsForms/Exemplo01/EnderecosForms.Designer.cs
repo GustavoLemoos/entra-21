@@ -30,6 +30,10 @@
         {
             this.labelEndereços = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ColumnCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnEnderecoCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCep = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maskedTextBoxCep = new System.Windows.Forms.MaskedTextBox();
             this.labelCep = new System.Windows.Forms.Label();
             this.labelEnderecoCompleto = new System.Windows.Forms.Label();
@@ -40,10 +44,6 @@
             this.buttonEditar = new System.Windows.Forms.Button();
             this.comboBoxPaciente = new System.Windows.Forms.ComboBox();
             this.buttonCancelar = new System.Windows.Forms.Button();
-            this.ColumnCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnEnderecoCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCep = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnPaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,6 +74,39 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1048, 501);
             this.dataGridView1.TabIndex = 1;
+            // 
+            // ColumnCodigo
+            // 
+            this.ColumnCodigo.HeaderText = "Código";
+            this.ColumnCodigo.MinimumWidth = 6;
+            this.ColumnCodigo.Name = "ColumnCodigo";
+            this.ColumnCodigo.ReadOnly = true;
+            this.ColumnCodigo.Visible = false;
+            this.ColumnCodigo.Width = 125;
+            // 
+            // ColumnEnderecoCompleto
+            // 
+            this.ColumnEnderecoCompleto.HeaderText = "Endereço Completo";
+            this.ColumnEnderecoCompleto.MinimumWidth = 6;
+            this.ColumnEnderecoCompleto.Name = "ColumnEnderecoCompleto";
+            this.ColumnEnderecoCompleto.ReadOnly = true;
+            this.ColumnEnderecoCompleto.Width = 125;
+            // 
+            // ColumnCep
+            // 
+            this.ColumnCep.HeaderText = "CEP";
+            this.ColumnCep.MinimumWidth = 6;
+            this.ColumnCep.Name = "ColumnCep";
+            this.ColumnCep.ReadOnly = true;
+            this.ColumnCep.Width = 125;
+            // 
+            // ColumnPaciente
+            // 
+            this.ColumnPaciente.HeaderText = "Paciente";
+            this.ColumnPaciente.MinimumWidth = 6;
+            this.ColumnPaciente.Name = "ColumnPaciente";
+            this.ColumnPaciente.ReadOnly = true;
+            this.ColumnPaciente.Width = 125;
             // 
             // maskedTextBoxCep
             // 
@@ -147,10 +180,6 @@
             // comboBoxPaciente
             // 
             this.comboBoxPaciente.FormattingEnabled = true;
-            this.comboBoxPaciente.Items.AddRange(new object[] {
-            "Jobson",
-            "Goku",
-            "Vegeta"});
             this.comboBoxPaciente.Location = new System.Drawing.Point(1091, 187);
             this.comboBoxPaciente.Name = "comboBoxPaciente";
             this.comboBoxPaciente.Size = new System.Drawing.Size(398, 28);
@@ -166,39 +195,6 @@
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
-            // 
-            // ColumnCodigo
-            // 
-            this.ColumnCodigo.HeaderText = "Código";
-            this.ColumnCodigo.MinimumWidth = 6;
-            this.ColumnCodigo.Name = "ColumnCodigo";
-            this.ColumnCodigo.ReadOnly = true;
-            this.ColumnCodigo.Visible = false;
-            this.ColumnCodigo.Width = 125;
-            // 
-            // ColumnEnderecoCompleto
-            // 
-            this.ColumnEnderecoCompleto.HeaderText = "Endereço Completo";
-            this.ColumnEnderecoCompleto.MinimumWidth = 6;
-            this.ColumnEnderecoCompleto.Name = "ColumnEnderecoCompleto";
-            this.ColumnEnderecoCompleto.ReadOnly = true;
-            this.ColumnEnderecoCompleto.Width = 125;
-            // 
-            // ColumnCep
-            // 
-            this.ColumnCep.HeaderText = "CEP";
-            this.ColumnCep.MinimumWidth = 6;
-            this.ColumnCep.Name = "ColumnCep";
-            this.ColumnCep.ReadOnly = true;
-            this.ColumnCep.Width = 125;
-            // 
-            // ColumnPaciente
-            // 
-            this.ColumnPaciente.HeaderText = "Paciente";
-            this.ColumnPaciente.MinimumWidth = 6;
-            this.ColumnPaciente.Name = "ColumnPaciente";
-            this.ColumnPaciente.ReadOnly = true;
-            this.ColumnPaciente.Width = 125;
             // 
             // EnderecosForms
             // 

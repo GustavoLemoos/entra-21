@@ -13,6 +13,7 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
     public partial class EnderecosForms : Form
     {
         private EnderecoServico enderecoServico;
+        private PacienteServico pacienteServico;
 
         // Construtor: construir o objeto que está sendo instanciado com as devidas informações ou rotinas
         public EnderecosForms()
@@ -21,7 +22,12 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
 
             enderecoServico = new EnderecoServico();
 
-            // Deve apresentar os dados quando a tela 
+            // Iniciando o objeto de PacienteServico o permitirá listar os pacientes no ComboBox e decorrente disso será possível o usuário
+            // selecionar o mesmo
+            pacienteServico = new PacienteServico();
+
+            // Deve apresentar os dados quando a tela for carregada
+            PreencherDataGridViewComEnderecos();
         }
 
         private void buttonCancelar_Click(object sender, EventArgs e)
