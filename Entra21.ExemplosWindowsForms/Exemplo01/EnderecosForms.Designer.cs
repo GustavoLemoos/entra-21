@@ -124,6 +124,7 @@
             this.buttonSalvar.TabIndex = 8;
             this.buttonSalvar.Text = "Salvar";
             this.buttonSalvar.UseVisualStyleBackColor = true;
+            this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
             // 
             // buttonApagar
             // 
@@ -146,10 +147,15 @@
             // comboBoxPaciente
             // 
             this.comboBoxPaciente.FormattingEnabled = true;
+            this.comboBoxPaciente.Items.AddRange(new object[] {
+            "Jobson",
+            "Goku",
+            "Vegeta"});
             this.comboBoxPaciente.Location = new System.Drawing.Point(1091, 187);
             this.comboBoxPaciente.Name = "comboBoxPaciente";
             this.comboBoxPaciente.Size = new System.Drawing.Size(398, 28);
             this.comboBoxPaciente.TabIndex = 11;
+            this.comboBoxPaciente.SelectedIndexChanged += new System.EventHandler(this.comboBoxPaciente_SelectedIndexChanged);
             // 
             // buttonCancelar
             // 
