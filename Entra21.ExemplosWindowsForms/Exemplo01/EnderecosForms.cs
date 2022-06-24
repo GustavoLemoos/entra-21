@@ -32,6 +32,8 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
 
             // Irá preencher o ComboBox(campo de seleção) com os pacientes
             PreencherComboBoxComOsNomesDosPacientes();
+
+            ObterDadosCep();
         }
 
         private void PreencherComboBoxComOsNomesDosPacientes()
@@ -120,7 +122,10 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
                 // Obter a resposta da requisição
                 var resposta = resultado.Content.ReadAsStringAsync().Result;
 
-                var dadosEndereco = JsonConvert.DeserializeObject(resposta);
+                var dadosEndereco = JsonConvert.DeserializeObject<EnderecosDadoRequisicao>(resposta);
+
+                textBoxEnderecoCompleto.Text = $"{dadosEndereco.Uf} - {dadosEndereco.Localidade} - {dadosEndereco.Bairro} -" +
+                    $"{dadosEndereco.Logradouro}";
             }
         }
         private void comboBoxPaciente_SelectedIndexChanged(object sender, EventArgs e)
