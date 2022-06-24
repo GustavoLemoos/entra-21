@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -103,6 +104,25 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
             }
         }
 
+        private void ObterDadosCep()
+        {
+            var cep = "89070200";
+
+            // Http client permite fazer requisições para obter ou enviar dados para outros sistemas
+            var httpClient = new HttpClient();
+
+            // Executando a requisição para o Site ViaCep para obter os dados do endereço do cep
+            var resultado = httpClient.GetAsync($"https://viacep.com.br/ws/{cep}/json/").Result;
+
+            // Verificar se a requisição deu certo
+            if (resultado.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                // Obter a resposta da requisição
+                var resposta = resultado.Content.ReadAsStringAsync().Result;
+
+                var dadosEndereco = JsonConvert.DeserializeObject(resposta);
+            }
+        }
         private void comboBoxPaciente_SelectedIndexChanged(object sender, EventArgs e)
         {
 
