@@ -111,6 +111,7 @@
             // maskedTextBoxCep
             // 
             this.maskedTextBoxCep.Location = new System.Drawing.Point(1090, 81);
+            this.maskedTextBoxCep.Mask = "99999-999";
             this.maskedTextBoxCep.Name = "maskedTextBoxCep";
             this.maskedTextBoxCep.Size = new System.Drawing.Size(125, 27);
             this.maskedTextBoxCep.TabIndex = 2;
@@ -179,11 +180,13 @@
             // 
             // comboBoxPaciente
             // 
+            this.comboBoxPaciente.DisplayMember = "Nome";
             this.comboBoxPaciente.FormattingEnabled = true;
             this.comboBoxPaciente.Location = new System.Drawing.Point(1091, 187);
             this.comboBoxPaciente.Name = "comboBoxPaciente";
             this.comboBoxPaciente.Size = new System.Drawing.Size(398, 28);
             this.comboBoxPaciente.TabIndex = 11;
+            this.comboBoxPaciente.ValueMember = "Codigo";
             this.comboBoxPaciente.SelectedIndexChanged += new System.EventHandler(this.comboBoxPaciente_SelectedIndexChanged);
             // 
             // buttonCancelar

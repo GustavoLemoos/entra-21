@@ -25,6 +25,27 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
             return pacientes;
         }
 
+        public Paciente ObterPorNomePaciente(string nomePaciente)
+        {
+            // Percorrer a lista de pacientes para encontrar o paciente por nome
+            for (int i = 0; i < pacientes.Count; i++)
+            {
+                // Obter o paciente que está sendo percorrido
+                var paciente = pacientes[i];
+
+                // Verificar se o paciente atual contém o nome do paciente escolhido
+                if (paciente.Nome == nomePaciente)
+                {
+                    return paciente;
+                }
+
+                // Retorna null quando não encontrar nenhum paciente com o nome do paciente escolhido 
+            }
+
+            return null;
+
+        }
+
         private void LerArquivo()
         {
             // Verificar se o arquivo existe

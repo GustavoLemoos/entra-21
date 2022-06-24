@@ -28,6 +28,22 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
 
             // Deve apresentar os dados quando a tela for carregada
             PreencherDataGridViewComEnderecos();
+
+            // Irá preencher o ComboBox(campo de seleção) com os pacientes
+            PreencherComboBoxComOsNomesDosPacientes();
+        }
+
+        private void PreencherComboBoxComOsNomesDosPacientes()
+        {
+            // Obter lista dos pacientes que foram cadastrados, ou seja, armazenados no JSON
+            var pacientes = pacienteServico.ObterTodos();
+
+            for (var i = 0; i < pacientes.Count; i++)
+            {
+                var paciente = pacientes[i];
+                comboBoxPaciente.Items.Add(paciente.Nome);
+
+            }
         }
 
         private void buttonCancelar_Click(object sender, EventArgs e)
@@ -43,13 +59,13 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
             // Obter os dados preenchidos pelo usuário armazenando em variáveis
             var cep = maskedTextBoxCep.Text;
             var enderecoCompleto = textBoxEnderecoCompleto.Text;
-            var paciente = comboBoxPaciente.SelectedItem;
+            var nomePaciente = Convert.ToString(comboBoxPaciente.SelectedItem);
 
             // Construir o objeto de endereço com as variáveis 
             var endereco = new Endereco();
             endereco.Cep = cep;
             endereco.EnderecoCompleto = enderecoCompleto;
-            // endereco.Paciente = paciente;
+            endereco.Paciente = pacienteServico.ObterPorNomePaciente(nomePaciente);
 
             // Salvar este endereço na lista de endereços e no arquivo JSON
             enderecoServico.Adicionar(endereco);
@@ -82,7 +98,7 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
                     endereco.Codigo,
                     endereco.EnderecoCompleto,
                     endereco.Cep,
-                    "" //endereco.Paciente.Nome
+                    endereco.Paciente.Nome
                 });
             }
         }
