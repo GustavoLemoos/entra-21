@@ -144,8 +144,27 @@ CREATE TABLE enderecos(
 
 INSERT INTO enderecos (estado, cidade, bairro, cep, logradouro, numero, complemento) VALUES ('AC', 'Rio Branco', 'Ayrton Senna',
 	'69.911-866', 'Estrada Deputado José Rui da Silveira Lino', 282, 'Casa');
-INSERT INTO enderecos (estado, cidade, bairro, cep, logradouro, numero, complemento) VALUES ('', '', '',
-	'', '', , '');
+INSERT INTO enderecos (estado, cidade, bairro, cep, logradouro, numero, complemento) VALUES ('SC', 'Biguaçu', 'Fundos', 
+	'88.161-400', '', 995, '');
+INSERT INTO enderecos (estado, cidade, bairro, cep, logradouro, numero, complemento) VALUES ('MG', 'Santa Luzia', 'Padre Miguel',
+	'33.082-050', 'Rua Buenos Aires', 371, 'Apartamento');
+INSERT INTO enderecos (estado, cidade, bairro, cep, logradouro, numero, complemento) VALUES ('BA', '', 'São Tomé de Paripe',
+	'40.800-361', 'Travessa Luís Hage', 685, '');
+INSERT INTO enderecos (estado, cidade, bairro, cep, logradouro, numero, complemento) VALUES ('MG', 'Ipatinga', 'Vila Celeste',
+	'', 'Rua Antônio Boaventura Batista', 645, '');
+INSERT INTO enderecos (estado, cidade, bairro, cep, logradouro, numero, complemento) VALUES ('RS', 'Passo Fundo', 'Nenê Graeff',
+	'99.030-250', '', 154, '');
+INSERT INTO enderecos (estado, cidade, bairro, cep, logradouro, numero, complemento) VALUES ('AM', 'Manaus', 'Petrópolis',
+	'69.079-300', 'Rua Coronel Ferreira Sobrinho', 264, 'Fundos');
+INSERT INTO enderecos (estado, cidade, bairro, cep, logradouro, numero, complemento) VALUES ('TO', 'Gurupi', 'Muniz Santana',
+	'77.402-130', 'Rua Adelmo Aires Negri', 794, '');
+INSERT INTO enderecos (estado, cidade, bairro, cep, logradouro, numero, complemento) VALUES ('AC', '', 'Preventório',
+	'', 'Beco da Ligação II', 212, 'Bloco B');
+INSERT INTO enderecos (estado, cidade, bairro, cep, logradouro, numero, complemento) VALUES ('AP', 'Santana', 'Comercial',
+	'68.925-073', 'Rua Calçoene', 648, '');
+INSERT INTO enderecos (estado, cidade, bairro, cep, logradouro, numero, complemento) VALUES ('PB', 'Cabedelo', 'Camalaú',
+	'58.103-052', 'Rua Siqueira Campos', 249, '');
+	
 
 select * from enderecos;
 
@@ -161,5 +180,34 @@ CREATE TABLE champions(
 	habilidade5 VARCHAR(30),
 );
 
+INSERT INTO champions (nome, descricao, habilidade1, habilidade2, habilidade3, habilidade4, habilidade5)
+	VALUES ('Katarina', 'a Lâmina Sinistra', 'Voracidade', 'Lâmina Saltitante',
+	'Preparação', 'Shunpo', 'Lótus da Morte');
+INSERT INTO champions (nome, descricao, habilidade1, habilidade2, habilidade3, habilidade4, habilidade5)
+	VALUES ('Yasuo', '', 'Estilo do Errante', 'Tempestade de Aço',
+	'Parede de Vento', 'Espada Ágil', 'Último Suspiro');
+INSERT INTO champions (nome, descricao, habilidade1, habilidade2, habilidade3, habilidade4, habilidade5)
+	VALUES ('Master Yi', 'o Espadachim Wuju', 'Ataque Duplo', '',
+	'', '', '');
+INSERT INTO champions (nome, descricao, habilidade1, habilidade2, habilidade3, habilidade4, habilidade5)
+	VALUES ('Vayne', 'a Caçadora Noturna', 'Caçadora Noturna', 'Rolamento',
+	'Dardos de Prata', 'Condenar', 'Hora Final');
+INSERT INTO champions (nome, descricao, habilidade1, habilidade2, habilidade3, habilidade4, habilidade5)
+	VALUES ('Lee Sin', 'o Monge Cego', 'Agitação', 'Onda Sônica  Ataque Ressonante',
+	'Proteger  Vontade de Ferro', 'Tempestade , Mutilar', '');
+INSERT INTO champions (nome, descricao, habilidade1, habilidade2, habilidade3, habilidade4, habilidade5)
+	VALUES ('Vi', 'a Defensora de Piltover', 'Blindagem', '',
+	'Pancada Certeira', 'Força Excessiva', 'Saque e Enterrada');
+INSERT INTO champions (nome, descricao, habilidade1, habilidade2, habilidade3, habilidade4, habilidade5)
+	VALUES ('Diana', 'o Escárnio da Lua', 'Espada de Prata Lunar', 'Golpe Crescente',
+	'Cascata Lívida', 'Colapso Minguante', 'Zênite Lunar');
+INSERT INTO champions (nome, descricao, habilidade1, habilidade2, habilidade3, habilidade4, habilidade5)
+	VALUES ('Annie', 'a Criança Sombria', 'Piromania', 'Desintegrar',
+	'Incinerar', 'Escudo Fundido', 'Invocar: Tibbers');
+INSERT INTO champions (nome, descricao, habilidade1, habilidade2, habilidade3, habilidade4, habilidade5)
+	VALUES ('Aatrox', '', 'Poço de Sangue', 'Voo Sombrio',
+	'Sede de Sangue Preço em Sangue', 'Lâminas da Aflição', 'Massacre');
+
+DROP TABLE champions;
 SELECT * FROM champions;
 
