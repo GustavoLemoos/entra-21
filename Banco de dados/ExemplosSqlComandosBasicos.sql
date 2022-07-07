@@ -86,3 +86,26 @@ SELECT id, titulo
 	FROM trabalhos
 	ORDER BY id
 	OFFSET 4 ROWS FETCH NEXT 2 ROWS ONLY;
+
+-- Exercício 01
+CREATE TABLE pessoas(
+	id INTEGER IDENTITY(1,1) PRIMARY KEY,
+	nome VARCHAR(100),
+	cpf VARCHAR(14),
+	rg VARCHAR(12),
+	data_de_nascimento DATETIME2,
+	idade int
+);
+
+INSERT INTO pessoas (nome, cpf, rg, data_de_nascimento, idade) VALUES ('Erick Bryan Enrico Vieira', '699.734.958-70', 
+	'90.745.276-0', '1989-05-28', 29);
+INSERT INTO pessoas (nome, cpf, rg, data_de_nascimento, idade) VALUES ('Samuel Ruan Dias', '802.790.194-40', 
+	'55.318.691-7', '02-08-1988', 30);
+INSERT INTO pessoas (nome, cpf, rg, data_de_nascimento, idade) VALUES ('Fábio Benjamin Souza', '522.445.349-60', 
+	'54.715.232-2', '1970-03-22', 48);
+INSERT INTO pessoas (nome, cpf, rg, data_de_nascimento, idade) VALUES ('Elias Miguel Aparicio', '293.928.821-65', 
+	'12.680.444-8', '1986-06-07', 32);
+INSERT INTO pessoas (nome, cpf, rg, data_de_nascimento, idade) VALUES ('Alexandre Gustavo Cardoso', '617.408.878-24', 
+	'8.888.574-4', '2003-04-15', 15);
+
+SELECT id, nome, cpf, rg, FORMAT(data_de_nascimento, 'dd/MM/yyyy'), idade FROM pessoas;
