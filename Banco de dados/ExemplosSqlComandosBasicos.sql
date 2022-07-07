@@ -216,6 +216,12 @@ INSERT INTO champions (nome, descricao, habilidade1, habilidade2, habilidade3, h
 	VALUES ('Aatrox', '', 'Poço de Sangue', 'Voo Sombrio',
 	'Sede de Sangue Preço em Sangue', 'Lâminas da Aflição', 'Massacre');
 
+UPDATE champions SET descricao='o Imperdoável' WHERE nome='Yasuo';
+UPDATE champions SET habilidade2='Ataque Alpha', habilidade3='Meditar', habilidade4='Estilo Wuju', habilidade5='Highlander' WHERE nome='Master Yi';
+UPDATE champions SET habilidade5='Fúria do Dragão' WHERE nome='Lee Sin';
+UPDATE champions SET habilidade2='Quebra-cofres' WHERE nome='Vi';
+UPDATE champions SET descricao='a Espada Darkin' WHERE nome='Aatrox';
+
 DROP TABLE champions;
 SELECT * FROM champions;
 
