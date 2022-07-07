@@ -164,7 +164,15 @@ INSERT INTO enderecos (estado, cidade, bairro, cep, logradouro, numero, compleme
 	'68.925-073', 'Rua Calçoene', 648, '');
 INSERT INTO enderecos (estado, cidade, bairro, cep, logradouro, numero, complemento) VALUES ('PB', 'Cabedelo', 'Camalaú',
 	'58.103-052', 'Rua Siqueira Campos', 249, '');
-	
+
+UPDATE enderecos SET logradouro='Julio Teodoro Martins', complemento='Casa' WHERE cep='88.161-400';
+UPDATE enderecos SET cidade='Salvador', complemento='Casa' WHERE cep='40.800-361';
+UPDATE enderecos SET cep='35.162-484', complemento='Casa' WHERE bairro='Vila Celeste';
+UPDATE enderecos SET logradouro='Itu', complemento='Casa' WHERE cep='99.030-250';
+UPDATE enderecos SET complemento='Casa' WHERE cep='77.402-130';
+UPDATE enderecos SET cidade='Rio Branco', cep='69.900-162' WHERE bairro='Preventório';
+UPDATE enderecos SET complemento='Casa' WHERE cep='68.925-073';
+UPDATE enderecos SET complemento='Casa' WHERE cep='58.103-052';
 
 select * from enderecos;
 
@@ -210,4 +218,6 @@ INSERT INTO champions (nome, descricao, habilidade1, habilidade2, habilidade3, h
 
 DROP TABLE champions;
 SELECT * FROM champions;
+
+
 
