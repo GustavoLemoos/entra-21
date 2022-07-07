@@ -131,3 +131,35 @@ INSERT INTO pessoas (nome, cpf, rg, data_de_nascimento, idade) VALUES ('Bryan Ca
 SELECT id, nome, cpf, rg, FORMAT(data_de_nascimento, 'dd/MM/yyyy'), idade FROM pessoas;
 
 -- Exercício 02
+CREATE TABLE enderecos(
+	id INT IDENTITY(1,1) PRIMARY KEY,
+	estado VARCHAR(2),
+	cidade VARCHAR(140),
+	bairro VARCHAR(120),
+	cep VARCHAR(10),
+	logradouro VARCHAR(250),
+	numero INT,
+	complemento TEXT
+);
+
+INSERT INTO enderecos (estado, cidade, bairro, cep, logradouro, numero, complemento) VALUES ('AC', 'Rio Branco', 'Ayrton Senna',
+	'69.911-866', 'Estrada Deputado José Rui da Silveira Lino', 282, 'Casa');
+INSERT INTO enderecos (estado, cidade, bairro, cep, logradouro, numero, complemento) VALUES ('', '', '',
+	'', '', , '');
+
+select * from enderecos;
+
+-- Exercício 03
+CREATE TABLE champions(
+	id INT IDENTITY(1,1) PRIMARY KEY,
+	nome VARCHAR(100),
+	descricao VARCHAR(50),
+	habilidade1 VARCHAR(30),
+	habilidade2 VARCHAR(30),
+	habilidade3 VARCHAR(30),
+	habilidade4 VARCHAR(30),
+	habilidade5 VARCHAR(30),
+);
+
+SELECT * FROM champions;
+
