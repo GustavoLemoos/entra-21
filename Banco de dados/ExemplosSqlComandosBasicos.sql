@@ -225,5 +225,37 @@ UPDATE champions SET descricao='a Espada Darkin' WHERE nome='Aatrox';
 DROP TABLE champions;
 SELECT * FROM champions;
 
+-- Exemplo aula 11/07
+
+CREATE TABLE pecas(
+	id INTEGER PRIMARY KEY IDENTITY(1,1),
+	nome VARCHAR(60),
+	tipo INTEGER,
+	preco_unitario DECIMAL(6,2)
+);
+CREATE TABLE clientes(
+	id INTEGER PRIMARY KEY IDENTITY(1,1),
+	nome VARCHAR(60),
+	CPF varchar(14)
+);
+
+CREATE TABLE enderecos(
+	id INTEGER PRIMARY KEY IDENTITY(1,1),
+	id_cliente INTEGER NOT NULL,
+	cep VARCHAR(9) NOT NULL,
+	estados VARCHAR(2) NOT NULL,
+	cidade VARCHAR(30) NOT NULL,
+	bairro VARCHAR(30) NOT NULL,
+	logradouro VARCHAR(40) NOT NULL,
+	numero VARCHAR(10) NOT NULL,
+	decricao TEXT,
+	FOREIGN KEY (id_cliente) REFERENCES clientes(id)
+);
+
+CREATE TABLE pedidos(
+	
+);
+CREATE TABLE pedidos_pecas();
+
 
 
