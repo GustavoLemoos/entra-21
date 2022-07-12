@@ -233,29 +233,90 @@ CREATE TABLE pecas(
 	tipo INTEGER,
 	preco_unitario DECIMAL(6,2)
 );
+
 CREATE TABLE clientes(
 	id INTEGER PRIMARY KEY IDENTITY(1,1),
 	nome VARCHAR(60),
-	CPF varchar(14)
+	cpf varchar(20)
 );
 
 CREATE TABLE enderecos(
 	id INTEGER PRIMARY KEY IDENTITY(1,1),
 	id_cliente INTEGER NOT NULL,
-	cep VARCHAR(9) NOT NULL,
-	estados VARCHAR(2) NOT NULL,
+	cep VARCHAR(30) NOT NULL,
+	estado VARCHAR(20) NOT NULL,
 	cidade VARCHAR(30) NOT NULL,
 	bairro VARCHAR(30) NOT NULL,
 	logradouro VARCHAR(40) NOT NULL,
-	numero VARCHAR(10) NOT NULL,
+	numero VARCHAR(20) NOT NULL,
 	decricao TEXT,
 	FOREIGN KEY (id_cliente) REFERENCES clientes(id)
 );
 
 CREATE TABLE pedidos(
+	id INTEGER PRIMARY KEY IDENTITY(1,1),
+	id_cliente INTEGER NOT NULL,
+	status TINYINT NOT NULL, -- 0 - 255
+	data_criacao DATETIME2 NOT NULL,
+	data_compra DATETIME2,
+	data_efetivacao_compra DATETIME2,
 	
 );
-CREATE TABLE pedidos_pecas();
+CREATE TABLE pedidos_pecas(
+	id INTEGER PRIMARY KEY IDENTITY(1,1),
+	id_peca INTEGER,
+	id_pedido INTEGER,
 
+	quantidade SMALLINT,
+	FOREIGN KEY (id_pedido) REFERENCES pedidos(id),
+	FOREIGN KEY (id_peca) REFERENCES pecas(id)
+);
 
+-- Tipos de peças
+-- 1 - SSD
+-- 2 - Placa Vídeo
+-- 3 - Placa Mãe
+-- 4 - Fonte
+-- 5 - Memória RAM
 
+INSERT INTO pecas (nome, tipo, preco_unitario) VALUES
+('SSD 200 GB', 1, 200),
+('SSD 200 M2', 1, 420.39),
+('RTX 2000 TI', 2, 9999.99),
+('GTX 1060', 2, 1500),
+('16GB DDR5 4800GHZ', 5, 800),
+('16GB DDR4 3200GHZ', 5, 350);
+
+INSERT INTO clientes(nome, cpf) VALUES
+('Claudio', '070.355.489-73'),
+('Cry', '032.599.364-69'),
+('Juliana', '123.456.789-123');
+
+INSERT INTO enderecos(id_cliente, estado, cidade, bairro, cep, logradouro, numero) VALUES 
+(1, 'SC', 'Blumenau', 'Velha', '89037-301', 'Rua Divinopolis', 222), 
+(2, 'SC', 'Blumenau', 'Velha Grande', '89032-235', 'Morro da Edite', 35), 
+(3, 'SC', 'Blumenau', 'Judity', 'Sem cep', 'Rua da Kellen', 23);
+
+SELECT * FROM pecas;
+SELECT * FROM clientes;
+SELECT * FROM enderecos;
+
+SELECT
+	c.nome,
+	c.cpf,
+	CONCAT(
+		e.estado, ' - ',
+		e.cidade, ' - ',
+		e.bairro, ' - ',
+		e.logradouro, ' - ',
+		e.numero) AS 'Endereço Completo'
+	FROM clientes AS c
+	INNER JOIN enderecos AS e ON (e.id_cliente = c.id);
+
+SELECT 
+	c.nome,
+	e.bairro,
+	e.logradouro
+	FROM enderecos AS e
+	INNER JOIN clientes AS c ON (e.id_clientes = e.id_cliente)
+	WHERE e.bairro  LIKE '%Velha%';
