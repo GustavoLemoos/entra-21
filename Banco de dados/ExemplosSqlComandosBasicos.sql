@@ -320,3 +320,24 @@ SELECT
 	FROM enderecos AS e
 	INNER JOIN clientes AS c ON (e.id_clientes = e.id_cliente)
 	WHERE e.bairro  LIKE '%Velha%';
+
+-- Status do pedido
+-- 0 - Carrinho
+-- 1 - Aguardando pagamento
+-- 2 - Pagamento efetuado
+-- 3 - Entrega realizada
+INSERT INTO pedidos (id_cliente, status, data_criacao) VALUES
+(1, 0, GETDATE()),
+((SELECT id FROM clientes WHERE nome = 'Cry'), 0, GETDATE());
+
+SELECT 
+	FORMAT(p.data_criacao, 'dd/MM/yyyy'),
+	CASE
+		WHEN [status] = 0 THEN 'Carrinho'
+		WHEN [status] = 1 THEN 'Aguardando pagamento'
+		WHEN [status] = 2 THEN 'Pagamento efetuado'
+		ELSE 'Entrega realizada'
+	END AS 'Status pedido',
+		c.nome
+	FROM pedidos AS p
+	INNER JOIN clientes AS c ON (p.id_cliente = c.id);
